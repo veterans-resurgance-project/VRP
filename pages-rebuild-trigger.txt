@@ -1,0 +1,5 @@
+Triggering GitHub Pages rebuild
+
+This file was added to force a Pages rebuild and confirm the updated index.html is published.
+
+Timestamp: 2026-08-30T23:22:00Z
