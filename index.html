@@ -1,0 +1,221 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veterans Resurgence Project</title>
+<style>
+:root {
+--primary: #1b365d;
+--secondary: #8b263e;
+--accent: #d4af37;
+--light: #f4f6f9;
+--dark: #222222;
+--white: #ffffff;
+--success: #2e7d32;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+
+/* Navigation */
+nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.logo { color: var(--white); font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 2rem; }
+.nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+.btn-nav { background-color: var(--secondary); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: bold; }
+.btn-nav:hover { background-color: #a32d4a; }
+
+/* Hero Section */
+.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://www.google.com/url?q=https://images.unsplash.com/photo-1448375240586-882707db888b?auto%3Dformat%26fit%3Dcrop%26w%3D1650%26q%3D80'); background-size: cover; background-position: center; padding: 6rem 2rem; text-align: center; color: var(--white); }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
+.hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: #e0e6ed; }
+.btn-hero { background-color: var(--accent); color: var(--dark); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
+.btn-hero:hover { background-color: #f1c40f; }
+
+/* General Container */
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary); position: relative; padding-bottom: 1rem; }
+h2::after { content: ''; width: 60px; height: 4px; background-color: var(--secondary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+/* Wish List Section */
+.wishlist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+.wishlist-category { background-color: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
+.wishlist-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+.wishlist-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px dashed #f0f0f0; font-size: 0.95rem; }
+.wishlist-item:last-child { border-bottom: none; }
+.status-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: bold; }
+.status-needed { background-color: #ffe6e6; color: var(--secondary); }
+
+/* Partners Section */
+.partners-section { background-color: var(--white); }
+.partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.partner-card { background-color: var(--light); padding: 2rem; border-radius: 8px; border-left: 5px solid var(--accent); }
+.partner-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+.partner-card p { font-size: 0.95rem; color: #555; }
+
+/* Contact Form */
+.contact-section { background-color: var(--light); }
+.contact-form { max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+.form-group textarea { height: 120px; resize: vertical; }
+.btn-submit { background-color: var(--primary); color: var(--white); border: none; padding: 0.8rem 2rem; width: 100%; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+.btn-submit:hover { background-color: #11223b; }
+
+/* Footer */
+footer { background-color: var(--primary); color: var(--white); text-align: center; padding: 2rem; font-size: 0.9rem; }
+
+/* Mobile Responsive Utilities */
+@media (max-width: 768px) {
+nav { flex-direction: column; padding: 1rem; }
+.nav-links { margin-top: 1rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+.nav-links li { margin: 0.5rem 1rem; }
+.hero h1 { font-size: 2.2rem; }
+.hero p { font-size: 1.1rem; }
+.contact-form { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Responsive Navigation -->
+<nav>
+<div class="logo">VETERANS RESURGENCE PROJECT</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#wishlist">Wish List</a></li>
+<li><a href="#partners">Partners</a></li>
+<li><a href="#contact" class="btn-nav">Pledge an Item</a></li>
+</ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="about">
+<h1>Building Purpose & Ecosystems</h1>
+<p>Deploying disciplined field units of unhoused and underemployed veterans to restore post-wildfire watersheds, clean up regional timberlands, and stabilize local public lands.</p>
+<a href="#wishlist" class="btn-hero">View Our Supply Registry</a>
+</section>
+
+<!-- Unconventional Wish List Section -->
+<section class="container" id="wishlist">
+<h2>Unconventional Wish List</h2>
+<div class="wishlist-grid">
+
+<div class="wishlist-category">
+<h3>Field Sanitation & Cleanup</h3>
+<div class="wishlist-item"><span>Contractor Trash Bags (3-mil, 42-Gal)</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Heavy-Duty Work Gloves (S-XXL)</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>High-Visibility Safety Vests (ANSI Class 2)</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>5-Gallon Insulated Water Coolers & Jugs</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>First Aid Trauma Kits (Quick-Clot/Eyewash)</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Portable Pop-up Canopy Tents (10x10 ft)</span> <span class="status-badge status-needed">Needed</span></div>
+</div>
+
+<div class="wishlist-category">
+<h3>Transport & Logistics</h3>
+<div class="wishlist-item"><span>Utility Flatbed Trailer (Tandem Axle, 14k GVWR)</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Cargo Tie-Downs & Ratchet Straps</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Tool Security Lockboxes & Storage Bins</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>3/4-Ton or 1-Ton Pickup Truck with Tow Pkg</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Portable Fuel Caddies (Gas/Diesel)</span> <span class="status-badge status-needed">Needed</span></div>
+</div>
+
+<div class="wishlist-category">
+<h3>Field & Aerial Surveillance</h3>
+<div class="wishlist-item"><span>Enterprise Thermal/Optical Drone Kit</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Ruggedized Field Mapping Tablets</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Portable Solar Generator Power Stations</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Handheld Two-Way Radios (VHF/GMRS)</span> <span class="status-badge status-needed">Needed</span></div>
+</div>
+
+<div class="wishlist-category">
+<h3>Restoration & Forestry Tools</h3>
+<div class="wishlist-item"><span>Crosscut Saws, Pulaskis, Mcleods, Hoes</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Long-Handled Loppers & Bypass Pruners</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>D-Handle Round-Point Shovels & Rakes</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Professional Chainsaw Kits & Bar Oil</span> <span class="status-badge status-needed">Needed</span></div>
+<div class="wishlist-item"><span>Safety Chaps & Mesh Shield Forestry Helmets</span> <span class="status-badge status-needed">Needed</span></div>
+</div>
+
+</div>
+</section>
+
+<!-- Institutional Partners Section -->
+<section class="partners-section" id="partners">
+<div class="container">
+<h2>Land Partners & Institutional Collaborators</h2>
+<div class="partners-grid">
+
+<div class="partner-card">
+<h3>Linn County Parks & Recreation</h3>
+<p>Primary land management partner for Waterloo County Park operations, trail maintenance, and site infrastructure coordination.</p>
+</div>
+
+<div class="partner-card">
+<h3>Oregon Department of Forestry (ODF)</h3>
+<p>State forestry partner for public land restoration, fire season compliance, and fuel reduction alignment.</p>
+</div>
+
+<div class="partner-card">
+<h3>OSU Extension Service</h3>
+<p>Institutional partner providing ecological research integration, educational resources, and land stewardship guidelines.</p>
+</div>
+
+<div class="partner-card">
+<h3>Benton Clean & Strong</h3>
+<p>Municipal and regional advocacy partner for solid waste management, litter mitigation, and community cleanup initiatives.</p>
+</div>
+
+<div class="partner-card">
+<h3>Lane County Parks</h3>
+<p>Regional park system partner for shared stewardship frameworks, campground logistics, and public land oversight.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Interactive Pledge Form -->
+<section class="contact-section" id="contact">
+<div class="container">
+<h2>Pledge Material Support</h2>
+<div class="contact-form">
+<form action="#" method="POST" onsubmit="alert('Thank you for your pledge to support our veterans!'); return false;">
+<div class="form-group">
+<label for="name">Your Name / Organization</label>
+<input type="text" id="name" required placeholder="John Doe">
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" required placeholder="john@example.com">
+</div>
+<div class="form-group">
+<label for="category">Item Category to Supply</label>
+<select id="category" required>
+<option value="">-- Select a Category --</option>
+<option value="sanitation">Field Sanitation & Cleanup</option>
+<option value="logistics">Transport & Logistics</option>
+<option value="surveillance">Field & Aerial Surveillance</option>
+<option value="tools">Restoration & Forestry Hand Tools</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Details of Pledged Items</label>
+<textarea id="message" required placeholder="Please list the specific items, brands, or quantities you wish to fulfill from our wish list..."></textarea>
+</div>
+<button type="submit" class="btn-submit">Submit Fulfillment Pledge</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2026 Veterans Resurgence Project. Built to serve local ecosystems and the veterans who safeguard them.</p>
+</footer>
+
+</body>
+</html>
