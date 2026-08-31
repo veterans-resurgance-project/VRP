@@ -28,36 +28,25 @@ nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justi
 .btn-nav:hover { background-color: #a32d4a; }
 
 /* Hero Section */
-.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://www.google.com/url?q=https://images.unsplash.com/photo-1448375240586-882707db888b?auto%3Dformat%26fit%3Dcrop%26w%3D1950%26q%3D80&source=gmail&ust=1788189281211000&sa=E') no-repeat center center/cover; padding: 8rem 2rem; text-align: center; color: var(--white); }
+.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 8rem 2rem; text-align: center; color: var(--white); }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
 .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: #e0e6ed; }
 .btn-hero { background-color: var(--accent); color: var(--dark); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; display: inline-block; }
 .btn-hero:hover { background-color: #f1c40f; }
-<section class="tree-of-life-section" style="padding: 60px 20px; text-align: center; background-color: #fcfbfa;">
-    <div class="container" style="max-width: 850px; margin: 0 auto;">
-        
-        <!-- Explanatory Header and Text -->
-        <div class="intro-content" style="margin-bottom: 40px;">
-            <h2 style="font-family: serif; font-size: 2.2rem; color: #2c3e50; margin-bottom: 20px;">Roots of Support, Fruits of Impact</h2>
-            <p style="color: #444; font-size: 1.15rem; line-height: 1.7; margin-bottom: 15px;">
-                Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our dedicated funders, community partners, and volunteers who anchor the entire structure.
-            </p>
-            <p style="color: #666; font-size: 1.05rem; line-height: 1.6;">
-                As that vital support rises through the branches, it manifests as public recognition and visibility, ultimately bearing tangible outcomes and sustainable growth for the community.
-            </p>
-        </div>
 
-        <!-- The Tree Illustration Diagram -->
-        <div class="image-wrapper" style="box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; background: #fff; padding: 20px; border: 1px solid #eae5de;">
-            <img src="watermarked_img_11789313041997475801.jpg" alt="Tree of Life Diagram showing roots, branches, flowers, and fruit representing community support, recognition, and tangible outcomes." style="width: 100%; height: auto; display: block; border-radius: 8px;">
-        </div>
-
-    </div>
-</section>
 /* General Container */
 .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
 h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary); position: relative; padding-bottom: 1rem; }
 h2::after { content: ''; width: 60px; height: 4px; background-color: var(--secondary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+/* Tree of Life Section */
+.tree-of-life-section { padding: 60px 20px; text-align: center; background-color: #fcfbfa; }
+.tree-of-life-section .container { max-width: 850px; margin: 0 auto; }
+.intro-content { margin-bottom: 40px; }
+.intro-content h2 { font-family: serif; color: #2c3e50; }
+.intro-content p { color: #444; font-size: 1.15rem; line-height: 1.7; margin-bottom: 15px; }
+.image-wrapper { box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; background: #fff; padding: 20px; border: 1px solid #eae5de; }
+.image-wrapper img { max-width: 100%; height: auto; display: block; }
 
 /* Wish List Section */
 .wishlist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
@@ -118,27 +107,26 @@ nav { flex-direction: column; padding: 1rem; }
 <p>Deploying disciplined field units of unhoused and underemployed veterans to restore post-wildfire watersheds, clean up regional timberlands, and stabilize local public lands.</p>
 <a href="#wishlist" class="btn-hero">View Our Supply Registry</a>
 </section>
-<section class="tree-of-life-section" style="padding: 60px 20px; text-align: center; background-color: #fcfbfa;">
-    <div class="container" style="max-width: 850px; margin: 0 auto;">
+
+<!-- Tree of Life Section -->
+<section class="tree-of-life-section">
+    <div class="container">
         
         <!-- Explanatory Header and Text -->
-        <div class="intro-content" style="margin-bottom: 40px;">
-            <h2 style="font-family: serif; font-size: 2.2rem; color: #2c3e50; margin-bottom: 20px;">Roots of Support, Fruits of Impact</h2>
-            <p style="color: #444; font-size: 1.15rem; line-height: 1.7; margin-bottom: 15px;">
-                Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our dedicated funders, community partners, and volunteers who anchor the entire structure.
-            </p>
-            <p style="color: #666; font-size: 1.05rem; line-height: 1.6;">
-                As that vital support rises through the branches, it manifests as public recognition and visibility, ultimately bearing tangible outcomes and sustainable growth for the community.
-            </p>
+        <div class="intro-content">
+            <h2>Roots of Support, Fruits of Impact</h2>
+            <p>Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our dedicated funders, community partners, and institutional collaborators.</p>
+            <p>As that vital support rises through the branches, it manifests as public recognition and visibility, ultimately bearing tangible outcomes and sustainable growth for the community.</p>
         </div>
 
         <!-- The Tree Illustration Diagram -->
-        <div class="image-wrapper" style="box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; background: #fff; padding: 20px; border: 1px solid #eae5de;">
-            <img src="watermarked_img_11789313041997475801.jpg" alt="Tree of Life Diagram showing roots, branches, flowers, and fruit representing community support, recognition, and tangible outcomes." style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        <div class="image-wrapper">
+            <img src="tree-of-life.svg" alt="Tree of Life Diagram showing roots, branches, flowers, and fruit representing community support, recognition, and tangible outcomes">
         </div>
 
     </div>
 </section>
+
 <!-- Unconventional Wish List Section -->
 <section class="container" id="wishlist">
 <h2>Unconventional Wish List</h2>
