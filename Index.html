@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Veteran Resurgence Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">VRP</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#tree-of-life">Framework</a></li>
+      <li><a href="#wishlist">Wish List</a></li>
+      <li><a href="#contact" class="btn-nav">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <h1>The Veteran Resurgence Project</h1>
+    <p>Post-wildfire watershed restoration and community resilience initiatives across Linn County and the Willamette Valley.</p>
+    <a href="#tree-of-life" class="btn-hero">Explore Our Model</a>
+  </header>
+
+  <!-- Tree of Life Section (Front & Center Explanation) -->
+  <section id="tree-of-life" class="tree-of-life-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Roots of Support, Fruits of Impact</h2>
+        <p>Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our veteran alliances, municipal partners, and mechanical trade networks that invest in our mission.</p>
+        <p>As that vital support rises through the branches, it manifests as public recognition, safety compliance, and sustainable growth, ultimately bearing tangible outcomes for our community.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="tree-of-life.svg" alt="Veterans Resurgence Project Root-to-Fruit Tree Model">
+      </div>
+    </div>
+  </section>
+
+  <!-- Unconventional Wish List Section (Pushed Down) -->
+  <section id="wishlist" class="container">
+    <h2>Unconventional Wish List</h2>
+    <p class="section-intro" style="text-align: center; margin-bottom: 2rem; color: #555;">Support our field operations and tactical logistics directly through our infrastructure registry.</p>
+    <div class="wishlist-grid">
+      <div class="wishlist-category">
+        <h3>Field Operations</h3>
+        <div class="wishlist-item">
+          <span>Heavy-Duty Hand Tools</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+        <div class="wishlist-item">
+          <span>Soil Testing Kits</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+      </div>
+      <div class="wishlist-category">
+        <h3>Safety & Logistics</h3>
+        <div class="wishlist-item">
+          <span>PPE & Hi-Vis Gear</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+        <div class="wishlist-item">
+          <span>First Aid Stations</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Connect With Us</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Chat Widget Modal -->
+  <button class="chat-button" onclick="document.getElementById('chatModal').classList.toggle('hidden')">Chat</button>
+  <div id="chatModal" class="chat-modal hidden">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3>Project Assistant</h3>
+        <button class="close-btn" onclick="document.getElementById('chatModal').classList.add('hidden')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>How can we help you get involved with the Watershed Stewards initiative today?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 The Veteran Resurgence Project. Built to serve local ecosystems and the veterans who safeguard them.</p>
+  </footer>
+
+</body>
+</html>
