@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1120" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #fcfbfa; }
+      .title { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; font-weight: bold; fill: #1b365d; text-anchor: middle; letter-spacing: 1px; }
+      .subtitle { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; font-style: italic; fill: #555555; text-anchor: middle; }
+      .category-header { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; font-weight: bold; fill: #8b263e; }
+      .node-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12.5px; fill: #222222; }
+      .root-card { fill: #f4f6f9; stroke: #1b365d; stroke-width: 2px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .branch-card { fill: #fcfbfa; stroke: #8b263e; stroke-width: 2px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .fruit-card { fill: #fffdf5; stroke: #d4af37; stroke-width: 2.5px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .connector { stroke: #6b4423; stroke-width: 3.5px; fill: none; stroke-linecap: round; opacity: 0.85; }
+      .nutrient-flow { stroke: #4caf50; stroke-width: 2.5px; fill: none; stroke-dasharray: 6,4; opacity: 0.9; }
+      .organic-trunk { fill: none; stroke: url(#barkGrad); stroke-linecap: round; }
+    </style>
+    <linearGradient id="barkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a3319" />
+      <stop offset="50%" stop-color="#8d553b" />
+      <stop offset="100%" stop-color="#3d2514" />
+    </linearGradient>
+    <linearGradient id="canopyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e7d32" opacity="0.82" />
+      <stop offset="100%" stop-color="#1b5e20" opacity="0.88" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1120" class="bg" rx="12" />
+
+  <!-- Header & Subtitle -->
+  <text x="500" y="45" class="title">VETERANS RESURGENCE PROJECT: FOB COHORT MODEL</text>
+  <text x="500" y="70" class="subtitle">Root-to-Fruit Ecological Framework: Partners &amp; Funders Feeding Growth</text>
+
+  <!-- Ground Line Separating Funding/Partners (Soil/Roots) from Canopy (Outcomes) -->
+  <path d="M 50 630 Q 500 640 950 630" stroke="#b08d57" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+  <text x="500" y="623" font-family="'Segoe UI', sans-serif" font-size="12" fill="#8c6d48" font-style="italic" text-anchor="middle">SOIL &amp; SUBSURFACE FOUNDATION (Partners, Funders &amp; Inputs)</text>
+
+  <!-- Nutrient Flow Path Lines (Dashed Green Lifeblood up through trunk to fruit) -->
+  <path d="M 220 700 Q 350 610 480 500" class="nutrient-flow" />
+  <path d="M 390 770 Q 440 600 495 480" class="nutrient-flow" />
+  <path d="M 610 770 Q 560 600 505 480" class="nutrient-flow" />
+  <path d="M 780 700 Q 650 610 520 500" class="nutrient-flow" />
+
+  <!-- Organic Branching & Roots Line Work -->
+  <path d="M 500 560 Q 420 640 280 680" class="connector" />
+  <path d="M 500 560 Q 450 670 380 790" class="connector" />
+  <path d="M 500 560 Q 480 690 460 840" class="connector" />
+  <path d="M 500 560 Q 520 690 540 840" class="connector" />
+  <path d="M 500 560 Q 550 670 620 790" class="connector" />
+  <path d="M 500 560 Q 580 640 720 680" class="connector" />
+  
+  <path d="M 440 590 Q 340 660 170 740" class="connector" />
+  <path d="M 560 590 Q 660 660 830 740" class="connector" />
+
+  <!-- Upper Branches -->
+  <path d="M 470 400 C 380 350 280 300 190 280" class="connector" />
+  <path d="M 480 350 C 390 270 300 220 210 200" class="connector" />
+  <path d="M 500 330 C 500 250 500 200 500 165" class="connector" />
+  <path d="M 520 350 C 610 270 700 220 790 200" class="connector" />
+  <path d="M 530 400 C 620 350 720 300 810 280" class="connector" />
+
+  <!-- Organic Flowing Trunk -->
+  <path d="M 470 570 C 465 480 480 400 475 330" class="organic-trunk" stroke-width="28" />
+  <path d="M 530 570 C 535 480 520 400 525 330" class="organic-trunk" stroke-width="26" />
+  <path d="M 490 540 C 495 450 505 380 500 320" class="organic-trunk" stroke-width="18" stroke="#3d2514" />
+
+  <!-- Foliage Canopy Clusters -->
+  <circle cx="500" cy="240" r="135" fill="url(#canopyGrad)" />
+  <circle cx="390" cy="270" r="95" fill="url(#canopyGrad)" />
+  <circle cx="610" cy="270" r="95" fill="url(#canopyGrad)" />
+  <circle cx="500" cy="160" r="85" fill="url(#canopyGrad)" />
+  <circle cx="300" cy="300" r="75" fill="url(#canopyGrad)" />
+  <circle cx="700" cy="300" r="75" fill="url(#canopyGrad)" />
+
+  <!-- ================= ROOTS / FUNDERS & PARTNERS (6 SYMMETRICALLY BALANCED BOXES) ================= -->
+  
+  <!-- Left Side Roots (3 boxes cleanly tiered) -->
+  <g transform="translate(30, 650)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">VETERAN ALLIANCES</text>
+    <text x="12" y="48" class="node-text">• Veteran Cohort Partners</text>
+    <text x="12" y="68" class="node-text">• Peer Support Networks</text>
+  </g>
+
+  <g transform="translate(15, 750)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">FOUNDATIONAL INPUTS</text>
+    <text x="12" y="48" class="node-text">• Community Partners &amp; Support</text>
+    <text x="12" y="68" class="node-text">• Local Supply Chains</text>
+  </g>
+
+  <g transform="translate(30, 850)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">SHOP EXCHANGE</text>
+    <text x="12" y="48" class="node-text">• Mechanical Trade Nets</text>
+    <text x="12" y="68" class="node-text">• Tool &amp; Equipment Pooling</text>
+  </g>
+
+  <!-- Right Side Roots (3 boxes cleanly tiered to mirror left) -->
+  <g transform="translate(755, 650)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">OPERATIONS</text>
+    <text x="12" y="48" class="node-text">• Distributed Regional Nodes</text>
+    <text x="12" y="68" class="node-text">• Traveling Ambassador Network</text>
+  </g>
+
+  <g transform="translate(770, 750)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">RESOURCES</text>
+    <text x="12" y="48" class="node-text">• Resource Allocation (ODF)</text>
+    <text x="12" y="68" class="node-text">• Field Logistics Support</text>
+  </g>
+
+  <g transform="translate(755, 850)">
+    <rect width="215" height="85" class="root-card" />
+    <text x="12" y="24" class="category-header">LAND &amp; WATER</text>
+    <text x="12" y="48" class="node-text">• County Parks (Waterloo)</text>
+    <text x="12" y="68" class="node-text">• Private Timber Partners</text>
+  </g>
+
+
+  <!-- ================= BRANCHES (SIDES) ================= -->
+  <!-- Moved Infrastructure Box Higher Up on Left -->
+  <g transform="translate(35, 175)">
+    <rect width="235" height="85" class="branch-card" />
+    <text x="15" y="24" class="category-header">INFRASTRUCTURE</text>
+    <text x="15" y="48" class="node-text">• Compliance Training</text>
+    <text x="15" y="70" class="node-text">• Safety &amp; Field Protocols</text>
+  </g>
+
+  <g transform="translate(370, 75)">
+    <rect width="260" height="65" class="branch-card" />
+    <text x="15" y="24" class="category-header">PIPELINES</text>
+    <text x="15" y="48" class="node-text">• Mentorship &amp; Cohort Pipelines</text>
+  </g>
+
+  <!-- Credentials box removed entirely to prevent overlap/clutter -->
+
+  <g transform="translate(730, 160)">
+    <rect width="235" height="85" class="branch-card" />
+    <text x="15" y="24" class="category-header">ECOSYSTEM IMPACT</text>
+    <text x="15" y="48" class="node-text">• Restored Watersheds</text>
+    <text x="15" y="70" class="node-text">• Wildfire Reduction Initiatives</text>
+  </g>
+
+
+  <!-- ================= FRUIT / OUTCOMES (2 BALANCED PAIRS ON LEFT & RIGHT) ================= -->
+  
+  <!-- Left Side Outcomes (Tiered stacked pair below infrastructure) -->
+  <g transform="translate(40, 295)">
+    <rect width="240" height="75" class="fruit-card" />
+    <text x="15" y="22" class="category-header" fill="#b8860b">COMMUNITY TIES</text>
+    <text x="15" y="44" class="node-text">• Strengthened Local Partnerships</text>
+    <text x="15" y="62" class="node-text">• Regional Civic Engagement</text>
+  </g>
+
+  <g transform="translate(40, 385)">
+    <rect width="240" height="75" class="fruit-card" />
+    <text x="15" y="22" class="category-header" fill="#b8860b">LONG-TERM OUTCOME</text>
+    <text x="15" y="44" class="node-text">• Independent Housing &amp; Stability</text>
+    <text x="15" y="62" class="node-text">• Sustained Quality of Life</text>
+  </g>
+
+  <!-- Right Side Outcomes (Tiered stacked pair matching left) -->
+  <g transform="translate(720, 295)">
+    <rect width="240" height="75" class="fruit-card" />
+    <text x="15" y="22" class="category-header" fill="#b8860b">COMMUNITY FRUIT</text>
+    <text x="15" y="44" class="node-text">• Local Economic Stimulus &amp; Jobs</text>
+    <text x="15" y="62" class="node-text">• Stabilized Veteran Lives</text>
+  </g>
+
+  <g transform="translate(720, 385)">
+    <rect width="240" height="75" class="fruit-card" />
+    <text x="15" y="22" class="category-header" fill="#b8860b">CAPACITY BUILDING</text>
+    <text x="15" y="44" class="node-text">• Expanded Fob Infrastructure</text>
+    <text x="15" y="62" class="node-text">• Scalable Watershed Networks</text>
+  </g>
+
+  <!-- Golden Fruit Orbs on Canopy (Nourished by the Roots) -->
+  <circle cx="440" cy="190" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="560" cy="190" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="500" cy="135" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="340" cy="240" r="12" fill="#d4af37" stroke="#8b263e" stroke-width="2" />
+  <circle cx="660" cy="240" r="12" fill="#d4af37" stroke="#8b263e" stroke-width="2" />
+  <circle cx="470" cy="280" r="12" fill="#8b263e" stroke="#d4af37" stroke-width="2" />
+  <circle cx="530" cy="280" r="12" fill="#8b263e" stroke="#d4af37" stroke-width="2" />
+</svg>
+
