@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1450" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #fcfbfa; }
+      .title { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; font-weight: bold; fill: #1b365d; text-anchor: middle; letter-spacing: 1px; }
+      .category-header { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; font-weight: bold; fill: #8b263e; }
+      .node-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12.5px; fill: #222222; }
+      .root-card { fill: #f4f6f9; stroke: #1b365d; stroke-width: 2px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .branch-card { fill: #fcfbfa; stroke: #8b263e; stroke-width: 2px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .fruit-card { fill: #fffdf5; stroke: #d4af37; stroke-width: 2.5px; rx: 8px; filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.04)); }
+      .connector { stroke: #6b4423; stroke-width: 3.5px; fill: none; stroke-linecap: round; opacity: 0.85; }
+      .nutrient-flow { stroke: #4caf50; stroke-width: 2.5px; fill: none; stroke-dasharray: 6,4; opacity: 0.9; }
+      .organic-trunk { fill: none; stroke: url(#barkGrad); stroke-linecap: round; }
+    </style>
+    <linearGradient id="barkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a3319" />
+      <stop offset="50%" stop-color="#8d553b" />
+      <stop offset="100%" stop-color="#3d2514" />
+    </linearGradient>
+    <linearGradient id="canopyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e7d32" opacity="0.78" />
+      <stop offset="100%" stop-color="#1b5e20" opacity="0.85" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="1450" class="bg" rx="12" />
+
+  <text x="500" y="55" class="title">VETERANS RESURGENCE PROJECT: FOB COHORT MODEL</text>
+
+  <path d="M 50 820 Q 500 830 950 820" stroke="#b08d57" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+  <text x="500" y="813" font-family="'Segoe UI', sans-serif" font-size="12" fill="#8c6d48" font-style="italic" text-anchor="middle">SOIL &amp; SUBSURFACE FOUNDATION (Partners, Funders &amp; Inputs)</text>
+
+  <path d="M 220 890 Q 350 760 480 620" class="nutrient-flow" />
+  <path d="M 390 960 Q 440 750 495 600" class="nutrient-flow" />
+  <path d="M 610 960 Q 560 750 505 600" class="nutrient-flow" />
+  <path d="M 780 890 Q 650 760 520 620" class="nutrient-flow" />
+
+  <path d="M 500 720 Q 420 800 280 840" class="connector" />
+  <path d="M 500 720 Q 450 830 380 950" class="connector" />
+  <path d="M 500 720 Q 480 850 460 1020" class="connector" />
+  <path d="M 500 720 Q 520 850 540 1020" class="connector" />
+  <path d="M 500 720 Q 550 830 620 950" class="connector" />
+  <path d="M 500 720 Q 580 800 720 840" class="connector" />
+  
+  <path d="M 440 750 Q 340 820 170 910" class="connector" />
+  <path d="M 560 750 Q 660 820 830 910" class="connector" />
+
+  <path d="M 470 450 C 380 390 280 320 190 300" class="connector" />
+  <path d="M 480 390 C 390 300 300 240 210 220" class="connector" />
+  <path d="M 500 370 C 500 280 500 220 500 185" class="connector" />
+  <path d="M 520 390 C 610 300 700 240 790 220" class="connector" />
+  <path d="M 530 450 C 620 390 720 320 810 300" class="connector" />
+
+  <path d="M 470 730 C 465 610 480 450 475 360" class="organic-trunk" stroke-width="28" />
+  <path d="M 530 730 C 535 610 520 450 525 360" class="organic-trunk" stroke-width="26" />
+  <path d="M 490 690 C 495 570 505 420 500 350" class="organic-trunk" stroke-width="18" stroke="#3d2514" />
+
+  <circle cx="500" cy="275" r="120" fill="url(#canopyGrad)" />
+  <circle cx="380" cy="305" r="80" fill="url(#canopyGrad)" />
+  <circle cx="620" cy="305" r="80" fill="url(#canopyGrad)" />
+  <circle cx="500" cy="185" r="75" fill="url(#canopyGrad)" />
+  <circle cx="290" cy="335" r="65" fill="url(#canopyGrad)" />
+  <circle cx="710" cy="335" r="65" fill="url(#canopyGrad)" />
+
+  <g transform="translate(30, 845)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">VETERAN ALLIANCES</text>
+    <text x="12" y="48" class="node-text">• Veteran Cohort Partners</text>
+    <text x="12" y="70" class="node-text">• Peer Support Networks</text>
+    <text x="12" y="92" class="node-text">• Expanded Cohort Network</text>
+  </g>
+
+  <g transform="translate(15, 970)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">FOUNDATIONAL INPUTS</text>
+    <text x="12" y="48" class="node-text">• Community Partners &amp; Support</text>
+    <text x="12" y="70" class="node-text">• Local Supply Chains</text>
+    <text x="12" y="92" class="node-text">• Donor &amp; Grant Feeders</text>
+  </g>
+
+  <g transform="translate(30, 1095)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">SHOP EXCHANGE</text>
+    <text x="12" y="48" class="node-text">• Mechanical Trade Nets</text>
+    <text x="12" y="70" class="node-text">• Tool &amp; Equipment Pooling</text>
+    <text x="12" y="92" class="node-text">• Workshop Expansion Hubs</text>
+  </g>
+
+  <g transform="translate(755, 845)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">OPERATIONS</text>
+    <text x="12" y="48" class="node-text">• Distributed Regional Nodes</text>
+    <text x="12" y="70" class="node-text">• Traveling Ambassador Network</text>
+    <text x="12" y="92" class="node-text">• Cross-Regional Logistics</text>
+  </g>
+
+  <g transform="translate(770, 970)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">RESOURCES</text>
+    <text x="12" y="48" class="node-text">• Resource Allocation (ODF)</text>
+    <text x="12" y="70" class="node-text">• Field Logistics Support</text>
+    <text x="12" y="92" class="node-text">• Specialized Field Gear</text>
+  </g>
+
+  <g transform="translate(755, 1095)">
+    <rect width="215" height="105" class="root-card" />
+    <text x="12" y="24" class="category-header">LAND &amp; WATER</text>
+    <text x="12" y="48" class="node-text">• County Parks (Waterloo)</text>
+    <text x="12" y="70" class="node-text">• Private Timber Partners</text>
+    <text x="12" y="92" class="node-text">• Protected Forest Tracts</text>
+  </g>
+
+
+  <g transform="translate(35, 155)">
+    <rect width="235" height="90" class="branch-card" />
+    <text x="15" y="24" class="category-header">INFRASTRUCTURE</text>
+    <text x="15" y="48" class="node-text">• Compliance Training</text>
+    <text x="15" y="70" class="node-text">• Safety &amp; Field Protocols</text>
+  </g>
+
+  <g transform="translate(370, 85)">
+    <rect width="260" height="70" class="branch-card" />
+    <text x="15" y="26" class="category-header">PIPELINES</text>
+    <text x="15" y="50" class="node-text">• Mentorship &amp; Cohort Pipelines</text>
+  </g>
+
+  <g transform="translate(730, 155)">
+    <rect width="235" height="90" class="branch-card" />
+    <text x="15" y="24" class="category-header">ECOSYSTEM IMPACT</text>
+    <text x="15" y="48" class="node-text">• Restored Watersheds</text>
+    <text x="15" y="70" class="node-text">• Wildfire Reduction Initiatives</text>
+  </g>
+
+
+  <g transform="translate(35, 275)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">COMMUNITY TIES</text>
+    <text x="15" y="48" class="node-text">• Strengthened Local Partnerships</text>
+    <text x="15" y="70" class="node-text">• Regional Civic Engagement</text>
+    <text x="15" y="92" class="node-text">• Expanded Outreach &amp; Advocacy</text>
+  </g>
+
+  <g transform="translate(35, 415)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">LONG-TERM OUTCOME</text>
+    <text x="15" y="48" class="node-text">• Independent Housing &amp; Stability</text>
+    <text x="15" y="70" class="node-text">• Sustained Quality of Life</text>
+    <text x="15" y="92" class="node-text">• Permanent Career Placement</text>
+  </g>
+
+  <g transform="translate(35, 555)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">PROGRAM EXPANSION</text>
+    <text x="15" y="48" class="node-text">• Additional Cohort Capacity</text>
+    <text x="15" y="70" class="node-text">• Advanced Leadership Tracks</text>
+    <text x="15" y="92" class="node-text">• Wish List / Scale Initiatives</text>
+  </g>
+
+  <g transform="translate(725, 275)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">COMMUNITY FRUIT</text>
+    <text x="15" y="48" class="node-text">• Local Economic Stimulus &amp; Jobs</text>
+    <text x="15" y="70" class="node-text">• Stabilized Veteran Lives</text>
+    <text x="15" y="92" class="node-text">• Multi-Generational Impact</text>
+  </g>
+
+  <g transform="translate(725, 415)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">CAPACITY BUILDING</text>
+    <text x="15" y="48" class="node-text">• Expanded Fob Infrastructure</text>
+    <text x="15" y="70" class="node-text">• Scalable Watershed Networks</text>
+    <text x="15" y="92" class="node-text">• Advanced Equipment Reserves</text>
+  </g>
+
+  <g transform="translate(725, 555)">
+    <rect width="240" height="115" class="fruit-card" />
+    <text x="15" y="24" class="category-header" fill="#b8860b">SUSTAINED GROWTH</text>
+    <text x="15" y="48" class="node-text">• Endowment &amp; Funder Security</text>
+    <text x="15" y="70" class="node-text">• Permanent Field Stations</text>
+    <text x="15" y="92" class="node-text">• Long-Term Resource Pipeline</text>
+  </g>
+
+  <circle cx="440" cy="220" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="560" cy="220" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="500" cy="160" r="14" fill="#d4af37" stroke="#8b263e" stroke-width="2.5" />
+  <circle cx="330" cy="270" r="12" fill="#d4af37" stroke="#8b263e" stroke-width="2" />
+  <circle cx="670" cy="270" r="12" fill="#d4af37" stroke="#8b263e" stroke-width="2" />
+  <circle cx="460" cy="315" r="12" fill="#8b263e" stroke="#d4af37" stroke-width="2" />
+  <circle cx="540" cy="315" r="12" fill="#8b263e" stroke="#d4af37" stroke-width="2" />
+</svg>
+
