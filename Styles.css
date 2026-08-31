@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Veteran Resurgence Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">VRP</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#tree-of-life">Tree of Life</a></li>
+      <li><a href="#wishlist">Wish List</a></li>
+      <li><a href="#contact" class="btn-nav">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <h1>The Veteran Resurgence Project</h1>
+    <p>Post-wildfire watershed restoration and community resilience initiatives across Linn County and the Willamette Valley.</p>
+    <a href="#contact" class="btn-hero">Join Our Mission</a>
+  </header>
+
+  <!-- Tree of Life Section -->
+  <section id="tree-of-life" class="tree-of-life-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>The Tree of Life Initiative</h2>
+        <p>Symbolizing growth, recovery, and rooted strength, our watershed stewardship programs connect veterans with hands-on environmental restoration.</p>
+        <p>Explore our visual framework for habitat recovery and sustainable land management below.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="tree-of-life.svg" alt="Tree of Life Watershed Diagram">
+      </div>
+    </div>
+  </section>
+
+  <!-- Wish List Section -->
+  <section id="wishlist" class="container">
+    <h2>Infrastructure & Field Gear Wish List</h2>
+    <div class="wishlist-grid">
+      <div class="wishlist-category">
+        <h3>Field Operations</h3>
+        <div class="wishlist-item">
+          <span>Heavy-Duty Hand Tools</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+        <div class="wishlist-item">
+          <span>Soil Testing Kits</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+      </div>
+      <div class="wishlist-category">
+        <h3>Safety & Logistics</h3>
+        <div class="wishlist-item">
+          <span>PPE & Hi-Vis Gear</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+        <div class="wishlist-item">
+          <span>First Aid Stations</span>
+          <span class="status-badge status-needed">Needed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Connect With Us</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Chat Widget Modal -->
+  <button class="chat-button" onclick="document.getElementById('chatModal').classList.toggle('hidden')">Chat</button>
+  <div id="chatModal" class="chat-modal hidden">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3>Project Assistant</h3>
+        <button class="close-btn" onclick="document.getElementById('chatModal').classList.add('hidden')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>How can we help you get involved with the Watershed Stewards initiative today?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer>
+    <p>&copy; 2026 The Veteran Resurgence Project. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>:root {
+  --primary: #1b365d;
+  --secondary: #8b263e;
+  --accent: #d4af37;
+  --light: #f4f6f9;
+  --dark: #222222;
+  --white: #ffffff;
+  --success: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.btn-nav {
+  background-color: var(--secondary);
+  color: var(--white) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-nav:hover {
+  background-color: #a32d4a;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 8rem 2rem;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #e0e6ed;
+}
+
+.btn-hero {
+  background-color: var(--accent);
+  color: var(--dark);
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  background-color: #f1c40f;
+}
+
+/* General Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Tree of Life Section */
+.tree-of-life-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fcfbfa;
+}
+
+.tree-of-life-section .container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.intro-content {
+  margin-bottom: 40px;
+}
+
+.intro-content h2 {
+  font-family: serif;
+  color: #2c3e50;
+}
+
+.intro-content p {
+  color: #444;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.image-wrapper {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eae5de;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Wish List Section */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.wishlist-category {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--primary);
+}
+
+.wishlist-category h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed #f0f0f0;
+  font-size: 0.95rem;
+}
+
+.wishlist-item:last-child {
+  border-bottom: none;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.status-needed {
+  background-color: #ffe6e6;
+  color: var(--secondary);
+}
+
+/* Contact Form */
+.contact-section {
+  background-color: var(--light);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 2rem;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #11223b;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Chat Widget Styles */
+.chat-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.chat-button:hover {
+  background-color: #a32d4a;
+}
+
+.chat-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  transition: opacity 0.3s ease;
+}
+
+.chat-modal.hidden {
+  display: none;
+}
+
+.modal-panel {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  color: var(--dark);
+}
+
+/* Mobile Responsive Utilities */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-links {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-links li {
+    margin: 0.5rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
