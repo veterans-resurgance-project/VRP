@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Veteran Resurgence Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">VRP</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#tree-of-life">Framework</a></li>
+      <li><a href="#wishlist">Wish List</a></li>
+      <li><a href="#program-overview">Why It Matters</a></li>
+      <li><a href="#contact" class="btn-nav">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <h1>The Veteran Resurgence Project</h1>
+    <p>Post-wildfire watershed restoration and community resilience initiatives across Linn County and the Willamette Valley.</p>
+    <a href="#tree-of-life" class="btn-hero">Explore Our Model</a>
+  </header>
+
+  <!-- Tree of Life Section -->
+  <section id="tree-of-life" class="tree-of-life-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Roots of Support, Fruits of Impact</h2>
+        <p>Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our veteran alliances, municipal partners, and mechanical trade networks that invest in our mission.</p>
+        <p>As that vital support rises through the branches, it manifests as public recognition, safety compliance, and sustainable growth, ultimately bearing tangible outcomes for our community.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="tree-of-life.svg" alt="Veterans Resurgence Project Root-to-Fruit Tree Model">
+      </div>
+    </div>
+  </section>
+
+  <!-- Wish List Section -->
+  <section id="wishlist" class="wishlist-section">
+    <div class="container">
+      <h2>Operational Wish List</h2>
+      <p class="wishlist-intro">Support our field operations in Linn County by helping us equip our crews with essential restoration tools, safety gear, and logistical hardware.</p>
+      
+      <div class="wishlist-grid">
+        <div class="wishlist-card">
+          <h3>Field Tools</h3>
+          <p>Pulaskis, mattocks, hand saws, and heavy-duty shovels for trail and slope stabilization.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+        <div class="wishlist-card">
+          <h3>Soil Testing Kits</h3>
+          <p>Advanced chemical and nutrient testing kits to evaluate burn severity and recovery viability.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+        <div class="wishlist-card">
+          <h3>Safety Equipment (PPE)</h3>
+          <p>High-visibility gear, helmets, durable boots, and eye protection for field personnel.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+        <div class="wishlist-card">
+          <h3>Drone Hardware</h3>
+          <p>Aerial mapping drones to assess hard-to-reach watershed damage and erosion patterns.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+        <div class="wishlist-card">
+          <h3>Transport Trailers</h3>
+          <p>Utility trailers for hauling gear, tools, and native planting materials to remote sites.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+        <div class="wishlist-card">
+          <h3>Communications Gear</h3>
+          <p>Rugged two-way radios and field comms for remote operations where cell service fails.</p>
+          <a href="#donate-form" class="btn-card" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c5e3b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">Fund This Item</a>
+        </div>
+      </div>
+
+      <!-- Donation Form Box -->
+      <div id="donate-form" style="margin-top: 3rem; background: #f9f9f9; padding: 2rem; border-radius: 8px; border: 1px solid #ddd; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h3 style="margin-bottom: 1rem; color: #333;">Operational Support Contribution</h3>
+        <form action="#" method="POST">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem;">Your Name</label>
+            <input type="text" name="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem;">Email Address</label>
+            <input type="email" name="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem;">Select Wish List Item to Support</label>
+            <select name="item" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+              <option value="field-tools">Field Tools</option>
+              <option value="soil-kits">Soil Testing Kits</option>
+              <option value="ppe">Safety Equipment (PPE)</option>
+              <option value="drone">Drone Hardware</option>
+              <option value="trailers">Transport Trailers</option>
+              <option value="comms">Communications Gear</option>
+            </select>
+          </div>
+          <button type="submit" style="background: #2c5e3b; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">Submit Pledge</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Talking Points & Program Overview Section -->
+  <section id="program-overview" style="padding: 4rem 1rem; background: #f4f6f4; color: #222;">
+    <div class="container" style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="text-align: center; margin-bottom: 1rem; color: #1a3c27; font-size: 2rem;">Why This Work Matters</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #555; font-size: 1.05rem;">Core talking points detailing the multi-layered benefits of deploying veteran-led crews for post-wildfire recovery across Linn County.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #2c5e3b;">
+          <h3 style="color: #2c5e3b; margin-bottom: 0.75rem; font-size: 1.25rem;">Watershed & Soil Defense</h3>
+          <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">High-severity burn scars strip slopes of vital root structures, leaving local hillsides vulnerable to severe topsoil erosion, silt-laden runoff, and mudslides during heavy winter rainfalls. Rapid field intervention—including manual stabilization, check-dam construction, and strategic reseeding—safeguards Willamette Valley waterways, protects critical municipal water infrastructure, and preserves delicate aquatic habitats from choking sediment.</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #2c5e3b;">
+          <h3 style="color: #2c5e3b; margin-bottom: 0.75rem; font-size: 1.25rem;">Purpose-Driven Veteran Careers</h3>
+          <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">Returning service members possess unmatched discipline, adaptability, and teamwork under pressure. This initiative channels those invaluable assets into environmental stewardship, offering veterans stable employment, specialized technical training in heavy trade logistics and land management, and a renewed sense of mission while healing the very public lands they call home.</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #2c5e3b;">
+          <h3 style="color: #2c5e3b; margin-bottom: 0.75rem; font-size: 1.25rem;">Measurable Regional Resilience</h3>
+          <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">Every dollar and piece of equipment is deployed with absolute transparency and tactical precision. By pairing advanced aerial drone mapping with rigorous ground-level labor, we identify high-priority damage zones immediately, ensuring community contributions create direct, long-lasting ecological security across Linn County.</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #2c5e3b;">
+          <h3 style="color: #2c5e3b; margin-bottom: 0.75rem; font-size: 1.25rem;">Timber Recovery & Economic Synergy</h3>
+          <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">Clearing fire-damaged corridors safely unlocks valuable merchantable and salvage timber that would otherwise rot on the stump or wash down into local river systems, creating hazardous log jams and clogging waterways. By routing 100% of the heavy equipment operations through local loggers and regional nurseries, every phase of our work directly stimulates the local resource economy, keeps specialized trade dollars in the community, and sources native replacement plantings locally.</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #2c5e3b;">
+          <h3 style="color: #2c5e3b; margin-bottom: 0.75rem; font-size: 1.25rem;">Academic & Research Collaboration</h3>
+          <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">Our field teams partner directly with regional college research departments to track post-wildfire slope stabilization, soil regeneration metrics, and planting survival rates over multi-year cycles. This ongoing data collection turns every restoration site into a living laboratory, validating best practices for Pacific Northwest watershed recovery while giving students hands-on field experience in environmental science.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p>Partner with us on post-wildfire watershed recovery across Linn County.</p>
+      <p>Email: info@veteranresurgenceproject.org</p>
+    </div>
+  </footer>
+
+</body>
+  </html>
