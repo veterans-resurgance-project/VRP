@@ -1,0 +1,78 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="500" fill="#fcfbfa"/>
+  
+  <!-- Soil/Ground -->
+  <ellipse cx="200" cy="420" rx="150" ry="40" fill="#8B7355" opacity="0.3"/>
+  
+  <!-- Roots -->
+  <g stroke="#6B4423" stroke-width="3" fill="none">
+    <path d="M 200 350 Q 150 380 120 420" stroke-linecap="round"/>
+    <path d="M 200 350 Q 250 380 280 420" stroke-linecap="round"/>
+    <path d="M 200 350 Q 180 390 160 430" stroke-linecap="round"/>
+    <path d="M 200 350 Q 220 390 240 430" stroke-linecap="round"/>
+    <!-- Root nodes -->
+    <circle cx="120" cy="420" r="4" fill="#6B4423"/>
+    <circle cx="280" cy="420" r="4" fill="#6B4423"/>
+    <circle cx="160" cy="430" r="4" fill="#6B4423"/>
+    <circle cx="240" cy="430" r="4" fill="#6B4423"/>
+  </g>
+  
+  <!-- Root labels -->
+  <text x="90" y="440" font-size="11" fill="#6B4423" font-weight="bold">Funders</text>
+  <text x="290" y="440" font-size="11" fill="#6B4423" font-weight="bold">Partners</text>
+  
+  <!-- Trunk -->
+  <rect x="185" y="280" width="30" height="70" fill="#8B6F47" rx="5"/>
+  <rect x="182" y="280" width="3" height="70" fill="#6B5436" opacity="0.5"/>
+  
+  <!-- Main Branches -->
+  <g stroke="#8B6F47" stroke-width="4" fill="none">
+    <path d="M 200 280 Q 140 220 100 160" stroke-linecap="round"/>
+    <path d="M 200 280 Q 260 220 300 160" stroke-linecap="round"/>
+    <path d="M 200 280 Q 170 230 140 180" stroke-linecap="round"/>
+    <path d="M 200 280 Q 230 230 260 180" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Secondary Branches -->
+  <g stroke="#A0826D" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M 100 160 L 70 120"/>
+    <path d="M 100 160 L 90 130"/>
+    <path d="M 300 160 L 330 120"/>
+    <path d="M 300 160 L 310 130"/>
+    <path d="M 140 180 L 110 140"/>
+    <path d="M 260 180 L 290 140"/>
+  </g>
+  
+  <!-- Leaves/Foliage -->
+  <g fill="#2E7D32" opacity="0.8">
+    <ellipse cx="70" cy="110" rx="12" ry="8" transform="rotate(-30 70 110)"/>
+    <ellipse cx="90" cy="115" rx="12" ry="8" transform="rotate(20 90 115)"/>
+    <ellipse cx="330" cy="110" rx="12" ry="8" transform="rotate(30 330 110)"/>
+    <ellipse cx="310" cy="115" rx="12" ry="8" transform="rotate(-20 310 115)"/>
+    <ellipse cx="110" cy="130" rx="12" ry="8" transform="rotate(-15 110 130)"/>
+    <ellipse cx="290" cy="130" rx="12" ry="8" transform="rotate(15 290 130)"/>
+  </g>
+  
+  <!-- Fruits/Flowers (representing outcomes) -->
+  <g fill="#D4AF37" opacity="0.9">
+    <circle cx="80" cy="100" r="6"/>
+    <circle cx="320" cy="100" r="6"/>
+    <circle cx="100" cy="120" r="5"/>
+    <circle cx="300" cy="120" r="5"/>
+    <circle cx="60" cy="130" r="5"/>
+    <circle cx="340" cy="130" r="5"/>
+  </g>
+  
+  <!-- Legend -->
+  <g font-size="12" fill="#2C3E50">
+    <text x="20" y="45" font-weight="bold">Roots: Foundation & Support</text>
+    <text x="20" y="65" font-weight="bold">Branches: Growth & Outreach</text>
+    <text x="20" y="85" font-weight="bold">Fruits: Tangible Outcomes</text>
+  </g>
+  
+  <!-- Color indicators -->
+  <rect x="15" y="35" width="8" height="8" fill="#6B4423"/>
+  <rect x="15" y="55" width="8" height="8" fill="#8B6F47"/>
+  <rect x="15" y="75" width="8" height="8" fill="#D4AF37"/>
+</svg>
