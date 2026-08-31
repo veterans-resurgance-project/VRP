@@ -23,12 +23,13 @@ nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justi
 .nav-links li { margin-left: 2rem; }
 .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
 .nav-links a:hover { color: var(--accent); }
-.btn-nav { background-color: var(--secondary); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: bold; }
-.btn-nav:hover { background-color: #a32d4a; }
+/* Avoid !important by increasing specificity */
+nav .btn-nav { background-color: var(--secondary); color: var(--white); padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: bold; }
+.nav .btn-nav:hover, .btn-nav:hover { background-color: #a32d4a; }
 
 /* Hero */
-.hero { background: linear-gradient(rgba(27,54,93,0.85), rgba(27,54,93,0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color: var(--white); padding: 80px 20px; text-align: center; }
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero { background: linear-gradient(rgba(27,54,93,0.85), rgba(27,54,93,0.85)), url('assets/hero.svg') center/cover no-repeat; color: var(--white); padding: 80px 20px; text-align: center; }
+.hero h1 { font-size: clamp(1.75rem, 4vw, 3rem); margin-bottom: 1rem; }
 .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: #e0e6ed; }
 .btn-hero { background-color: var(--accent); color: var(--dark); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; display: inline-block; }
 .btn-hero:hover { background-color: #f1c40f; }
@@ -79,4 +80,20 @@ footer { background-color: var(--primary); color: var(--white); text-align: cent
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1.1rem; }
   .contact-form { padding: 1.5rem; }
+}
+
+/* Keyboard focus styles for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .btn-nav:focus-visible, .btn-hero:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
