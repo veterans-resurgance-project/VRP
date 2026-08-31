@@ -1,6 +1,6 @@
 <DOCTYPE html>
 <html lang="en">
-<head><!-- pages-rebuild: 2026-08-30T23:35:00Z -->
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Veterans Resurgence Project</title>
@@ -18,7 +18,7 @@
 body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
 
 /* Navigation */
-nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.08); }
 .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
 .nav-links { display: flex; list-style: none; align-items: center; }
 .nav-links li { margin-left: 2rem; }
@@ -28,7 +28,7 @@ nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justi
 .btn-nav:hover { background-color: #a32d4a; }
 
 /* Hero Section */
-.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://www.google.com/url?q=https://images.unsplash.com/photo-1448375240586-882707db888b?auto%3Dformat%26fit%3Dcrop%26w%3D1650%26q%3D80'); background-size: cover; background-position: center; padding: 6rem 2rem; text-align: center; color: var(--white); }
+.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://www.google.com/url?q=https://images.unsplash.com/photo-1448375240586-882707db888b?auto%3Dformat%26fit%3Dcrop%26w%3D1600%26q%3D80') center/cover no-repeat; padding: 6rem 2rem; color: var(--white); text-align: center; }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
 .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: #e0e6ed; }
 .btn-hero { background-color: var(--accent); color: var(--dark); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
@@ -62,7 +62,7 @@ h2::after { content: ''; width: 60px; height: 4px; background-color: var(--secon
 .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); }
 .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
 .form-group textarea { height: 120px; resize: vertical; }
-.btn-submit { background-color: var(--primary); color: var(--white); border: none; padding: 0.8rem 2rem; width: 100%; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+.btn-submit { background-color: var(--primary); color: var(--white); border: none; padding: 0.8rem 2rem; width: 100%; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
 .btn-submit:hover { background-color: #11223b; }
 
 /* Footer */
@@ -77,6 +77,51 @@ nav { flex-direction: column; padding: 1rem; }
 .hero p { font-size: 1.1rem; }
 .contact-form { padding: 1.5rem; }
 }
+
+/* --- Chat button & modal styles --- */
+.chat-button {
+position: fixed;
+bottom: 24px;
+right: 24px;
+background: linear-gradient(135deg,var(--accent),#ffb84d);
+color: var(--dark);
+border: none;
+border-radius: 999px;
+width: 64px;
+height: 64px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+cursor: pointer;
+z-index: 120;
+}
+.chat-button:focus { outline: 3px solid rgba(212,175,55,0.25); }
+
+.chat-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 130;
+}
+.chat-modal .modal-panel {
+background: var(--white);
+width: 96%;
+max-width: 600px;
+border-radius: 8px;
+padding: 1.5rem;
+box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.chat-modal .modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem; }
+.chat-modal .close-btn { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; }
+.hidden { display: none !important; }
 </style>
 </head>
 <body>
@@ -216,6 +261,30 @@ nav { flex-direction: column; padding: 1rem; }
 <footer>
 <p>&copy; 2026 Veterans Resurgence Project. Built to serve local ecosystems and the veterans who safeguard them.</p>
 </footer>
+
+<!-- Chat button and modal -->
+<button id="chatButton" class="chat-button" aria-label="Open chat">Chat</button>
+<div id="chatModal" class="chat-modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <strong>Chat</strong>
+      <button class="close-btn" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Chat coming soon — replace this with your chat widget or embed.</p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    const btn = document.getElementById('chatButton');
+    const modal = document.getElementById('chatModal');
+    const closeBtn = modal?.querySelector('.close-btn');
+    btn?.addEventListener('click', () => { modal.classList.remove('hidden'); modal.setAttribute('aria-hidden','false'); });
+    closeBtn?.addEventListener('click', () => { modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); });
+    modal?.addEventListener('click', (e)=> { if(e.target === modal) { modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); }});
+  })();
+</script>
 
 </body>
 </html>
