@@ -1,92 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veterans Resurgence Project</title>
-<style>
-:root {
---primary: #1b365d;
---secondary: #8b263e;
---accent: #d4af37;
---light: #f4f6f9;
---dark: #222222;
---white: #ffffff;
---success: #2e7d32;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-
-/* Navigation */
-nav { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
-.logo { color: var(--white); font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
-.nav-links { display: flex; list-style: none; align-items: center; }
-.nav-links li { margin-left: 2rem; }
-.nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
-.nav-links a:hover { color: var(--accent); }
-.btn-nav { background-color: var(--secondary); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: bold; }
-.btn-nav:hover { background-color: #a32d4a; }
-
-/* Hero Section */
-.hero { background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(27, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: var(--white); padding: 8rem 2rem; text-align: center; min-height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
-.hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: #e0e6ed; }
-.btn-hero { background-color: var(--accent); color: var(--dark); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; display: inline-block; }
-.btn-hero:hover { background-color: #f1c40f; }
-
-/* General Container */
-.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary); position: relative; padding-bottom: 1rem; }
-h2::after { content: ''; width: 60px; height: 4px; background-color: var(--secondary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-
-/* Tree of Life Section */
-.tree-of-life-section { padding: 60px 20px; text-align: center; background-color: #fcfbfa; }
-.tree-of-life-section .container { max-width: 850px; margin: 0 auto; }
-.intro-content { margin-bottom: 40px; }
-.intro-content h2 { font-family: serif; color: #2c3e50; }
-.intro-content p { color: #444; font-size: 1.15rem; line-height: 1.7; margin-bottom: 15px; }
-.image-wrapper { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); border-radius: 12px; overflow: hidden; background: #fff; padding: 20px; border: 1px solid #eae5de; }
-.image-wrapper img { max-width: 100%; height: auto; display: block; }
-
-/* Wish List Section */
-.wishlist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-.wishlist-category { background-color: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border-top: 5px solid var(--primary); }
-.wishlist-category h3 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
-.wishlist-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px dashed #f0f0f0; font-size: 0.95rem; }
-.wishlist-item:last-child { border-bottom: none; }
-.status-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: bold; }
-.status-needed { background-color: #ffe6e6; color: var(--secondary); }
-
-/* Partners Section */
-.partners-section { background-color: var(--white); }
-.partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.partner-card { background-color: var(--light); padding: 2rem; border-radius: 8px; border-left: 5px solid var(--accent); }
-.partner-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.partner-card p { font-size: 0.95rem; color: #555; }
-
-/* Contact Form */
-.contact-section { background-color: var(--light); }
-.contact-form { max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
-.form-group { margin-bottom: 1.5rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
-.form-group textarea { height: 120px; resize: vertical; }
-.btn-submit { background-color: var(--primary); color: var(--white); border: none; padding: 0.8rem 2rem; width: 100%; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
-.btn-submit:hover { background-color: #11223b; }
-
-/* Footer */
-footer { background-color: var(--primary); color: var(--white); text-align: center; padding: 2rem; font-size: 0.9rem; }
-
-/* Mobile Responsive Utilities */
-@media (max-width: 768px) {
-nav { flex-direction: column; padding: 1rem; }
-.nav-links { margin-top: 1rem; width: 100%; justify-content: center; flex-wrap: wrap; }
-.nav-links li { margin: 0.5rem 1rem; }
-.hero h1 { font-size: 2.2rem; }
-.hero p { font-size: 1.1rem; }
-.contact-form { padding: 1.5rem; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterans Resurgence Project</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -106,25 +24,6 @@ nav { flex-direction: column; padding: 1rem; }
 <h1>Building Purpose & Ecosystems</h1>
 <p>Deploying disciplined field units of unhoused and underemployed veterans to restore post-wildfire watersheds, clean up regional timberlands, and stabilize local public lands.</p>
 <a href="#wishlist" class="btn-hero">View Our Supply Registry</a>
-</section>
-
-<!-- Tree of Life Section -->
-<section class="tree-of-life-section">
-    <div class="container">
-        
-        <!-- Explanatory Header and Text -->
-        <div class="intro-content">
-            <h2>Roots of Support, Fruits of Impact</h2>
-            <p>Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots—our dedicated funders, community partners, and institutional collaborators who invest in our mission.</p>
-            <p>As that vital support rises through the branches, it manifests as public recognition and visibility, ultimately bearing tangible outcomes and sustainable growth for the community.</p>
-        </div>
-
-        <!-- The Tree Illustration Diagram -->
-        <div class="image-wrapper">
-            <img src="./tree-of-life.svg" alt="Tree of Life Diagram showing roots, branches, flowers, and fruit representing community support, recognition, and tangible outcomes">
-        </div>
-
-    </div>
 </section>
 
 <!-- Unconventional Wish List Section -->
@@ -244,6 +143,30 @@ nav { flex-direction: column; padding: 1rem; }
 <footer>
 <p>&copy; 2026 Veterans Resurgence Project. Built to serve local ecosystems and the veterans who safeguard them.</p>
 </footer>
+
+<!-- Chat button and modal -->
+<button id="chatButton" class="chat-button" aria-label="Open chat">Chat</button>
+<div id="chatModal" class="chat-modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <strong>Chat</strong>
+      <button class="close-btn" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Chat coming soon — replace this with your chat widget or embed.</p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    const btn = document.getElementById('chatButton');
+    const modal = document.getElementById('chatModal');
+    const closeBtn = modal?.querySelector('.close-btn');
+    btn?.addEventListener('click', () => { modal.classList.remove('hidden'); modal.setAttribute('aria-hidden','false'); });
+    closeBtn?.addEventListener('click', () => { modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); });
+    modal?.addEventListener('click', (e)=> { if(e.target === modal) { modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); }});
+  })();
+</script>
 
 </body>
 </html>
