@@ -1,18 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partners & Donors - Watership Stewards</title>
+  <title>Partners & MOUs - Watership Stewards</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partners & Donors - Watership Stewards</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-header {
+      text-align: center;
+      padding: 6rem 1rem;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Screenshot_20260421-000340.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 2rem;
+    }
+    .hero-header p {
+      color: #f1f1f1 !important;
+    }
+    .partners-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .partner-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .partner-card h3 {
+      margin-bottom: 0.75rem;
+      color: #2c3e50;
+    }
+    .partner-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group input, 
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    .btn-submit {
+      background: #27ae60; 
+      color: white; 
+      border: none; 
+      padding: 0.75rem 1.5rem; 
+      border-radius: 4px; 
+      font-weight: bold; 
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s ease;
+    }
+    .btn-submit:hover {
+      background: #219653;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,106 +88,62 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#tree-of-life">Framework</a></li>
       <li><a href="index.html#wishlist">Wish List</a></li>
-      <li><a href="partners.html" style="color: #a3c1ad; font-weight: bold;">Partners & Donors</a></li>
+      <li><a href="partners.html">Partners & MOUs</a></li>
+      <li><a href="gallery.html">Field Gallery</a></li>
       <li><a href="index.html#contact" class="btn-nav">Get Involved</a></li>
     </ul>
   </nav>
 
-  <!-- Page Header -->
-  <header class="hero" style="padding: 5rem 1rem;">
-    <h2 class="brand-subtitle">Community Alliance</h2>
-    <h1>Partners & Donors</h1>
-    <p>Honoring the organizations, local businesses, and community stewards powering our post-wildfire watershed restoration across Linn County.</p>
+  <!-- Partners Hero Header -->
+  <header class="hero-header">
+    <h2 class="brand-subtitle" style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; color: #ddd;">Collaborative Ecosystem</h2>
+    <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Partners, MOUs & Data Trade</h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Transparent institutional frameworks and mutual knowledge-sharing networks powering Linn County recovery.</p>
   </header>
 
-  <!-- Partner Tiers Section -->
-  <section class="framework-section">
-    <div class="container framework-container">
+  <!-- Main Content Grid -->
+  <main class="partners-container">
+    <div class="partners-grid">
       
-      <!-- Tier 1: Municipal & Institutional Partners -->
-      <div class="framework-group">
-        <div class="tier-title-bar">
-          <span class="badge foundation-badge">Foundational</span>
-          <h3>Municipal & Academic Partners</h3>
-        </div>
-        <div class="framework-grid">
-          <div class="framework-card foundation-card">
-            <h4>Linn County Regional Agencies</h4>
-            <p>Coordinating high-priority watershed recovery zones and public land access across the Willamette Valley.</p>
-          </div>
-          <div class="framework-card foundation-card">
-            <h4>Pacific Northwest Research Alliances</h4>
-            <p>Collaborating on soil regeneration metrics, slope stabilization tracking, and ecological recovery data.</p>
-          </div>
-        </div>
+      <!-- MOU Access Box -->
+      <div class="partner-card">
+        <div class="card-icon">📄</div>
+        <h3>Memorandums of Understanding (MOUs)</h3>
+        <p>Review our official collaborative frameworks, inter-agency agreements, and operational protocols governing our regional watershed deployments across Linn County.</p>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 0.75rem;"><a href="docs/mou-municipal-framework.pdf" target="_blank" style="color: #27ae60; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">↓ Municipal & County Framework MOU (PDF)</a></li>
+          <li><a href="docs/mou-research-alliance.pdf" target="_blank" style="color: #27ae60; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">↓ Academic & Research Data-Sharing MOU (PDF)</a></li>
+        </ul>
       </div>
 
-      <!-- Tier 2: Trade & Logistics Sponsors -->
-      <div class="framework-group">
-        <div class="tier-title-bar">
-          <span class="badge structure-badge">Infrastructure</span>
-          <h3>Mechanical & Trade Allies</h3>
-        </div>
-        <div class="framework-grid structure-grid">
-          <div class="framework-card structure-card">
-            <h4>Willamette Timber & Loggers Network</h4>
-            <p>Providing heavy equipment logistics, salvage coordination, and local forestry expertise.</p>
+      <!-- Info-Trade Contribution Box -->
+      <div class="partner-card">
+        <div class="card-icon">🤝</div>
+        <h3>Data & Information Trade</h3>
+        <p>Have technical field data, GIS mapping layers, or botanical research to share? Trade your specialized insights for our proprietary restoration reports and field logs.</p>
+        <form>
+          <div class="form-group">
+            <input type="text" name="trade-name" placeholder="Your Name / Organization" required>
           </div>
-          <div class="framework-card structure-card">
-            <h4>Regional Native Nurseries</h4>
-            <p>Sourcing localized planting materials and seed stocks for critical riparian zone rebuilding.</p>
+          <div class="form-group">
+            <input type="email" name="trade-email" placeholder="Email Address" required>
           </div>
-        </div>
-      </div>
-
-      <!-- Tier 3: Community Donors & Supporters -->
-      <div class="framework-group">
-        <div class="tier-title-bar">
-          <span class="badge outcome-badge">Impact</span>
-          <h3>Community Donors & Stewards</h3>
-        </div>
-        <div class="framework-grid">
-          <div class="framework-card outcome-card">
-            <h4>Founding Donors Circle</h4>
-            <p>Generous individual contributors funding foundational field tools, safety gear, and rapid deployment hardware.</p>
+          <div class="form-group">
+            <textarea name="trade-offer" placeholder="Describe the info, data, or expertise you are offering..." rows="3" required></textarea>
           </div>
-          <div class="framework-card outcome-card">
-            <h4>Veteran Family Networks</h4>
-            <p>Grassroots support networks providing community backing for veteran career placement and field crews.</p>
-          </div>
-        </div>
+          <button type="submit" class="btn-submit">Submit Trade Proposal</button>
+        </form>
       </div>
 
     </div>
-  </section>
-
-  <!-- Partner Photo Celebration Grid -->
-  <section class="overview-section">
-    <div class="container overview-container">
-      <h2>Celebrating Our Coalition in Action</h2>
-      <p class="overview-intro">A visual look at the collaboration between our veteran field crews, local trade operators, and regional partners.</p>
-      
-      <div class="overview-grid">
-        <div class="overview-card">
-          <div style="font-size: 3rem; margin-bottom: 0.5rem; text-align: center;">🌲</div>
-          <h3 style="text-align: center;">Field Coordination</h3>
-          <p style="text-align: center;">Strategy sessions mapping out high-priority burn scars and erosion defense lines.</p>
-        </div>
-        <div class="overview-card">
-          <div style="font-size: 3rem; margin-bottom: 0.5rem; text-align: center;">🤝</div>
-          <h3 style="text-align: center;">Community Integration</h3>
-          <p style="text-align: center;">Local trade leaders meeting with veteran crew leads to align heavy machinery logistics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
+  <footer id="contact" style="background: #2c3e50; color: white; padding: 3rem 1rem; text-align: center; margin-top: 4rem;">
     <div class="container">
-      <h2>Join Our Partner Network</h2>
-      <p>Interested in becoming an organizational partner or community donor? Let’s connect.</p>
-      <p>Email: info@veteranresurgenceproject.org</p>
+      <h2>Collaborate With Us</h2>
+      <p style="color: #cbd5e1; margin-bottom: 1rem;">Building transparent, data-backed resilience across Willamette Valley watersheds.</p>
+      <p style="color: #cbd5e1;">Email: info@veteranresurgenceproject.org</p>
     </div>
   </footer>
 
