@@ -1,1 +1,309 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watership Stewards</title>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); 
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">WS</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#tree-of-life">Framework</a></li>
+      <li><a href="#wishlist">Wish List</a></li>
+      <li><a href="#program-overview">Why It Matters</a></li>
+      <li><a href="#contact" class="btn-nav">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <h2 class="brand-subtitle">Watership Stewards</h2>
+    <h1>The Veteran Resurgence Project</h1>
+    <p>Post-wildfire watershed restoration and community resilience initiatives across Linn County and the Willamette Valley.</p>
+    <a href="#tree-of-life" class="btn-hero">Explore Our Model</a>
+  </header>
+
+  <!-- Visual Tree Framework Banner Section -->
+  <section class="banner-section">
+    <div class="container banner-container">
+      <h2>The Ecosystem of Recovery</h2>
+      <p>From deep roots in our veteran alliances to sustainable outcomes across Linn County watersheds.</p>
+      
+      <div class="banner-card">
+        <div class="banner-icon">🌲</div>
+        <h3>Roots of Support, Fruits of Impact</h3>
+        <p>Our multi-tiered operational model anchors heavy field logistics in community alliances, rises through rigorous safety and trade training, and yields lasting ecological security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tree of Life Conceptual Framework Section -->
+  <section id="tree-of-life" class="framework-section">
+    <div class="container framework-container">
+      <div class="framework-header">
+        <h2>Roots of Support, Fruits of Impact</h2>
+        <p>Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots, rises through structural core infrastructure, and yields tangible, sustainable outcomes for our community.</p>
+      </div>
+
+      <!-- Foundation Tier -->
+      <div class="framework-group">
+        <div class="tier-title-bar">
+          <span class="badge foundation-badge">Foundation</span>
+          <h3>Foundational Roots (Our Support Base)</h3>
+        </div>
+        <div class="framework-grid">
+          <div class="framework-card foundation-card">
+            <h4>Veteran Alliances</h4>
+            <p>The collaborative base ensuring strength, discipline, and stability across all field deployments.</p>
+          </div>
+          <div class="framework-card foundation-card">
+            <h4>Mechanical Trades</h4>
+            <p>Local equipment operators, loggers, and hardware networks keeping our heavy logistics running.</p>
+          </div>
+          <div class="framework-card foundation-card">
+            <h4>Municipal Partners</h4>
+            <p>County and regional agencies coordinating high-priority restoration zones in Linn County.</p>
+          </div>
+          <div class="framework-card foundation-card">
+            <h4>Colleges & Research</h4>
+            <p>Academic partnerships tracking slope stabilization, soil regeneration, and ecological metrics.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Structure Tier -->
+      <div class="framework-group">
+        <div class="tier-title-bar">
+          <span class="badge structure-badge">Structure</span>
+          <h3>Core Infrastructure (The Trunk & Mechanism)</h3>
+        </div>
+        <div class="framework-grid structure-grid">
+          <div class="framework-card structure-card">
+            <h4>Training Programs</h4>
+            <p>Specialized technical education in heavy trade logistics, safety compliance, and land management.</p>
+          </div>
+          <div class="framework-card structure-card">
+            <h4>Safety & Operational Protocols</h4>
+            <p>Rigorous field safety standards ensuring transparent, precise, and secure mission execution.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcomes Tier -->
+      <div class="framework-group">
+        <div class="tier-title-bar">
+          <span class="badge outcome-badge">Outcomes</span>
+          <h3>Sustainable Branches & Fruits (Tangible Outcomes)</h3>
+        </div>
+        <div class="framework-grid">
+          <div class="framework-card outcome-card">
+            <h4>Watershed Defense</h4>
+            <p>Mitigating topsoil erosion, protecting Willamette Valley waterways, and preventing mudslides.</p>
+          </div>
+          <div class="framework-card outcome-card">
+            <h4>Timber Recovery</h4>
+            <p>Unlocking salvage timber from rot, clearing stream-clogging debris, and supporting local nurseries.</p>
+          </div>
+          <div class="framework-card outcome-card">
+            <h4>Veteran Careers</h4>
+            <p>Providing stable employment, purpose-driven missions, and long-term career placement.</p>
+          </div>
+          <div class="framework-card outcome-card">
+            <h4>Regional Resilience</h4>
+            <p>Long-term ecological security, data-backed restoration, and community-wide recovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wish List Section -->
+  <section id="wishlist" class="wishlist-section">
+    <div class="container">
+      <h2>Operational Wish List</h2>
+      <p class="wishlist-intro">Support our field operations in Linn County by helping us equip our crews with essential restoration tools, safety gear, and logistical hardware.</p>
+      
+      <div class="wishlist-grid">
+        <div class="wishlist-card" data-item="field-tools">
+          <h3>Field Tools</h3>
+          <p>Pulaskis, mattocks, hand saws, and heavy-duty shovels for trail and slope stabilization.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 5 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('field-tools')">Fund This Item</a>
+        </div>
+        
+        <div class="wishlist-card" data-item="soil-kits">
+          <h3>Soil Testing Kits</h3>
+          <p>Advanced chemical and nutrient testing kits to evaluate burn severity and recovery viability.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 10 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('soil-kits')">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="ppe">
+          <h3>Safety Equipment (PPE)</h3>
+          <p>High-visibility gear, helmets, durable boots, and eye protection for field personnel.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 15 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('ppe')">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="drone">
+          <h3>Drone Hardware</h3>
+          <p>Aerial mapping drones to assess hard-to-reach watershed damage and erosion patterns.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 2 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('drone')">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="trailers">
+          <h3>Transport Trailers</h3>
+          <p>Utility trailers for hauling gear, tools, and native planting materials to remote sites.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 1 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('trailers')">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="comms">
+          <h3>Communications Gear</h3>
+          <p>Rugged two-way radios and field comms for remote operations where cell service fails.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 6 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card" onclick="selectWishlistItem('comms')">Fund This Item</a>
+        </div>
+      </div>
+
+      <!-- Donation Form Box -->
+      <div id="donate-form" class="donate-form-box">
+        <h3>Operational Support Contribution</h3>
+        <form>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Select Wish List Item to Support</label>
+            <select name="item">
+              <option value="field-tools">Field Tools</option>
+              <option value="soil-kits">Soil Testing Kits</option>
+              <option value="ppe">Safety Equipment (PPE)</option>
+              <option value="drone">Drone Hardware</option>
+              <option value="trailers">Transport Trailers</option>
+              <option value="comms">Communications Gear</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Submit Pledge</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Talking Points & Program Overview Section -->
+  <section id="program-overview" class="overview-section">
+    <div class="container overview-container">
+      <h2>Why This Work Matters</h2>
+      <p class="overview-intro">Core talking points detailing the multi-layered benefits of deploying veteran-led crews for post-wildfire recovery across Linn County.</p>
+      
+      <div class="overview-grid">
+        <div class="overview-card">
+          <h3>Watershed & Soil Defense</h3>
+          <p>High-severity burn scars strip slopes of vital root structures, leaving local hillsides vulnerable to severe topsoil erosion, silt-laden runoff, and mudslides during heavy winter rainfalls. Rapid field intervention—including manual stabilization, check-dam construction, and strategic reseeding—safeguards Willamette Valley waterways, protects critical municipal water infrastructure, and preserves delicate aquatic habitats from choking sediment.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Purpose-Driven Veteran Careers</h3>
+          <p>Returning service members possess unmatched discipline, adaptability, and teamwork under pressure. This initiative channels those invaluable assets into environmental stewardship, offering veterans stable employment, specialized technical training in heavy trade logistics and land management, and a renewed sense of mission while healing the very public lands they call home.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Measurable Regional Resilience</h3>
+          <p>Every dollar and piece of equipment is deployed with absolute transparency and tactical precision. By pairing advanced aerial drone mapping with rigorous ground-level labor, we identify high-priority damage zones immediately, ensuring community contributions create direct, long-lasting ecological security across Linn County.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Timber Recovery & Economic Synergy</h3>
+          <p>Clearing fire-damaged corridors safely unlocks valuable merchantable and salvage timber that would otherwise rot on the stump or wash down into local river systems, creating hazardous log jams and clogging waterways. By routing 100% of the heavy equipment operations through local loggers and regional nurseries, every phase of our work directly stimulates the local resource economy, keeps specialized trade dollars in the community, and sources native replacement plantings locally.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Academic & Research Collaboration</h3>
+          <p>Our field teams partner directly with regional college research departments to track post-wildfire slope stabilization, soil regeneration metrics, and planting survival rates over multi-year cycles. This ongoing data collection turns every restoration site into a living laboratory, validating best practices for Pacific Northwest watershed recovery while giving students hands-on field experience in environmental science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p>Partner with us on post-wildfire watershed recovery across Linn County.</p>
+      <p>Email: info@veteranresurgenceproject.org</p>
+    </div>
+  </footer>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
