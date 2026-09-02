@@ -714,3 +714,53 @@ main.container .card a,
   background-color: #ffffff !important;
   color: #111827 !important;
 }
+/* Definitive High-Contrast Fix: Dark Text on White Partnership & Framework Boxes */
+.framework-card, 
+.structure-card, 
+.overview-card, 
+.framework-group, 
+.partner-box, 
+.card, 
+div[class*="framework"], 
+div[class*="partner"] {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+.framework-card p, 
+.framework-card li, 
+.framework-card span, 
+.framework-card h3, 
+.framework-card h4, 
+.structure-card p, 
+.structure-card li, 
+.structure-card span, 
+.structure-card h3, 
+.structure-card h4, 
+.overview-card p, 
+.overview-card li, 
+.overview-card span, 
+.overview-card h3, 
+.framework-group p, 
+.framework-group li, 
+.framework-group span, 
+.framework-group h3,
+.partner-box p, 
+.partner-box li, 
+.partner-box span, 
+.partner-box h3 {
+  color: #1f2937 !important; /* Deep charcoal black for maximum legibility */
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Force links inside those white boxes into a sharp, visible green */
+.framework-card a, 
+.structure-card a, 
+.overview-card a, 
+.framework-group a, 
+.partner-box a {
+  color: #1b4d3e !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
