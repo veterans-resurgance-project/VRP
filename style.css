@@ -598,3 +598,23 @@ h2, h3 {
   background: linear-gradient(135deg, #577d3fya 0%, #9cb390 100%) !important;
   border-color: #ffffff !important;
 }
+/* Restore and protect text readability specifically on the partners page */
+main.container p, main.container li, main.container span {
+  color: #f8fafc !important;
+}
+
+main.container strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Style the agreement links inside the partner description cards to stand out clearly */
+main.container a {
+  color: #8FA382 !important; /* Sage green accent */
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+main.container a:hover {
+  color: #4A6B35 !important; /* Moss green on hover */
+}
