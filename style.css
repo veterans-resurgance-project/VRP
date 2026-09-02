@@ -58,41 +58,7 @@ nav .logo {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(26, 60, 39, 0.85), rgba(26, 60, 39, 0.85)), center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 7rem 1rem;
-}
-.hero h2.brand-subtitle {
-  font-size: 1.8rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #a3c1ad;
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  color: #e2e8f0;
-}
-.btn-hero {
-  display: inline-block;
-  background: #a3c1ad;
-  color: #1a3c27;
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-}
+  
 
 /* Framework Banner */
 .banner-section {
