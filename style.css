@@ -640,3 +640,31 @@ main.container a {
   text-decoration: underline !important;
   font-weight: 700 !important;
 }
+/* Definitive Fix: Target explicit text elements inside main container */
+main.container p, 
+main.container li, 
+main.container span, 
+main.container div, 
+main.container article, 
+main.container section {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+main.container h1, 
+main.container h2, 
+main.container h3, 
+main.container h4 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+main.container a {
+  color: #b8ccaf !important; /* Brighter sage for high visibility against dark background */
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+main.container a:hover {
+  color: #ffffff !important;
+}
