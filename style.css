@@ -420,11 +420,84 @@ footer p {
   color: #a3c1ad;
   margin-bottom: 0.5rem;
 }
+/* Framework Section with Regenerating Hillside Background */
 .framework-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('exact-file-name-here.jpg');
+  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url('YOUR-EXACT-IMAGE-FILENAME.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: #ffffff;
+}
+
+/* Ensure text elements inside this section pop against the overlay */
+.framework-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.framework-header p {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.tier-title-bar h3 {
+  color: #ffffff !important;
+}
+
+.tier-title-bar {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card h4 {
+  color: #0f172a !important;
+}
+
+.framework-card p {
+  color: #475569 !important;
+}/* Framework Section with Regenerating Hillside Background */
+.framework-section {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url('YOUR-EXACT-IMAGE-FILENAME.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* Ensure text elements inside this section pop against the overlay */
+.framework-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.framework-header p {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.tier-title-bar h3 {
+  color: #ffffff !important;
+}
+
+.tier-title-bar {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card h4 {
+  color: #0f172a !important;
+}
+
+.framework-card p {
+  color: #475569 !important;
 }
