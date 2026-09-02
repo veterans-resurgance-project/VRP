@@ -618,3 +618,25 @@ main.container a {
 main.container a:hover {
   color: #4A6B35 !important; /* Moss green on hover */
 }
+/* Direct High-Contrast Override for Partners Page Content Blocks */
+main.container, .partner-section, .partner-card, .content-box {
+  background-color: #0f2618 !important;
+  color: #ffffff !important;
+}
+
+main.container p, 
+main.container li, 
+main.container span, 
+main.container div,
+.partner-section p, 
+.partner-section li {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+main.container a {
+  color: #b8ccaf !important; /* Lighter Sage for maximum visibility */
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
