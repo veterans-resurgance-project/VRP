@@ -584,3 +584,17 @@ h2, h3 {
   font-weight: 800 !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+/* Button styling with moss and sage green palette */
+.btn, button, .cta-button, a.button {
+  background: linear-gradient(135deg, #4A6B35 0%, #8FA382 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hover state for buttons */
+.btn:hover, button:hover, .cta-button:hover, a.button:hover {
+  background: linear-gradient(135deg, #577d3fya 0%, #9cb390 100%) !important;
+  border-color: #ffffff !important;
+}
