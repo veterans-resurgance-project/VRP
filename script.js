@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // Wish list funding tracker mock data mapping
   // Update these numbers dynamically to reflect real pledge counts
