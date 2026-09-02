@@ -423,7 +423,7 @@ footer p {
 /* Framework Section with Regenerating Hillside Background */
 .framework-section {
   padding: 80px 20px;
-  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url('YOUR-EXACT-IMAGE-FILENAME.jpg');
+  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url(1000005669.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
