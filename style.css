@@ -568,3 +568,8 @@ div[class*="card"] h3, div[class*="card"] h4, div[class*="group"] h3 {
 div[class*="card"] p, div[class*="card"] li, div[class*="group"] p {
   color: #f1f5f9 !important;
 }
+/* Force the outer section wrappers and grid backgrounds to match the rich forest theme */
+section, .container, .framework-container, .overview-container, #program-overview {
+  background: #0f2618 !important;
+  color: #ffffff !important;
+}
