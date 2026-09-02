@@ -420,3 +420,11 @@ footer p {
   color: #a3c1ad;
   margin-bottom: 0.5rem;
 }
+.framework-section {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('exact-file-name-here.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
