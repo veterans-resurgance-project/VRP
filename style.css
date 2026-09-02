@@ -534,3 +534,23 @@ footer p {
 .framework-card p, .structure-card p, .overview-card p, .framework-card li {
   color: #f1f5f9 !important; /* Bright off-white for maximum clarity */
 }
+/* Override all card backgrounds and text across Foundation, Structure, and Outcome tiers */
+.framework-group, .overview-grid, .framework-grid, 
+.framework-card, .structure-card, .overview-card {
+  background-color: #112a1b !important;
+  background-image: linear-gradient(135deg, rgba(17, 42, 27, 0.95), rgba(30, 107, 60, 0.9)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Force headings to pure white with bright green accents */
+.framework-group h3, .tier-title-bar h3, .framework-card h4, .structure-card h4, .overview-card h3 {
+  color: #ffffff !important;
+}
+
+/* Force all body text, paragraphs, and list items to crisp, highly visible white */
+.framework-group p, .framework-group span, .framework-group li,
+.framework-card p, .structure-card p, .overview-card p, 
+.framework-card li, .structure-card li, .overview-card li {
+  color: #f8fafc !important;
+}
