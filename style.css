@@ -554,3 +554,17 @@ footer p {
 .framework-card li, .structure-card li, .overview-card li {
   color: #f8fafc !important;
 }
+/* Definitive Forest Theme Overrides for Foundation, Structure & Outcome Containers */
+div[class*="card"], div[class*="group"], section[id*="program"] {
+  background: linear-gradient(135deg, rgba(15, 38, 24, 0.92), rgba(27, 84, 48, 0.88)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+div[class*="card"] h3, div[class*="card"] h4, div[class*="group"] h3 {
+  color: #ffffff !important;
+}
+
+div[class*="card"] p, div[class*="card"] li, div[class*="group"] p {
+  color: #f1f5f9 !important;
+}
