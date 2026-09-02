@@ -55,10 +55,54 @@ nav .logo {
   border-radius: 4px;
   border: 1px solid #a3c1ad;
 }
+  /* Hero Section */
+.hero-header {
+  text-align: center;
+  padding: 8rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Screenshot_20260421-000340.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+}
 
-/* Hero Section */
-.hero {
-  
+.hero-header .brand-subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ddd !important;
+}
+
+.hero-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #f1f1f1 !important;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #27ae60;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-hero:hover {
+  background: #219653;
+}
 
 /* Framework Banner */
 .banner-section {
