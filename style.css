@@ -668,3 +668,30 @@ main.container a {
 main.container a:hover {
   color: #ffffff !important;
 }
+/* Force light background boxes on the partners page to use crisp dark text */
+main.container .card, 
+main.container .partner-box, 
+main.container .box,
+.partners-container div,
+.light-box {
+  background-color: #f8fafc !important; /* Clean light background */
+  color: #0f172a !important;            /* Deep dark slate/black for maximum contrast */
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Ensure all paragraphs and lists inside those light boxes are dark and readable */
+main.container .card p, 
+main.container .card li, 
+main.container .card span,
+.partners-container div p,
+.light-box p {
+  color: #1e293b !important;            /* Near-black for crisp legibility */
+}
+
+/* Style links inside the light boxes to stand out clearly in a rich forest tone */
+main.container .card a,
+.light-box a {
+  color: #27ae60 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
