@@ -573,3 +573,14 @@ section, .container, .framework-container, .overview-container, #program-overvie
   background: #0f2618 !important;
   color: #ffffff !important;
 }
+/* Force Category Title Headings, Wish List, and Why This Work Matters titles to bold, high-visibility white */
+.tier-title-bar h3, 
+.section-title h2, 
+#wishlist h2, 
+#program-overview h2, 
+.category-title, 
+h2, h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
