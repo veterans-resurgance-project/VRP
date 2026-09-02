@@ -695,3 +695,22 @@ main.container .card a,
   font-weight: 700 !important;
   text-decoration: underline !important;
 }
+
+
+
+.partners-section p, .partners-section li, .partners-section span, 
+.partner-card p, .partner-card li, .card p, .card li {
+  color: #1f2937 !important; /* Rich charcoal black */
+  opacity: 1 !important;
+}
+
+.partners-section a, .partner-card a, .card a {
+  color: #1b4d3e !important; /* Deep forest green for links */
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+/* Force absolute dark text on any white or light partner card */
+.partners-section div, .partner-card, .card, .white-box {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
