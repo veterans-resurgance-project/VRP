@@ -764,3 +764,16 @@ div[class*="partner"] {
   font-weight: 700 !important;
   text-decoration: underline !important;
 }
+/* Global high-contrast enforcement for the Roots of Support / Impact boxes */
+div[class*="impact"], div[class*="roots"], .support-box, .impact-box {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+div[class*="impact"] p, div[class*="impact"] li, div[class*="impact"] span, div[class*="impact"] h3,
+div[class*="roots"] p, div[class*="roots"] li, div[class*="roots"] span, div[class*="roots"] h3,
+.support-box p, .support-box li, .support-box h3,
+.impact-box p, .impact-box li, .impact-box h3 {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
