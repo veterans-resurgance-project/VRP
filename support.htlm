@@ -8,7 +8,7 @@
 </head>
 <body style="background-color: #0f172a; color: #ffffff; font-family: inherit; margin: 0; padding: 0;">
 
-  <!-- Simple Navigation Bar -->
+  <!-- Navigation Bar -->
   <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
     <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white;">WS</div>
     <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
@@ -17,11 +17,11 @@
     </ul>
   </nav>
 
-  <!-- CELEBRATION & DONOR IMPACT LANDING SECTION -->
+  <!-- Celebration & Donor Impact Landing Section -->
   <main style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
     <section style="background: #144d29 !important; color: #ffffff !important; padding: 4rem 2rem; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.25);">
       
-      <!-- Hero / Celebration Header -->
+      <!-- Celebration Header -->
       <div style="text-align: center; max-width: 850px; margin: 0 auto 3rem auto;">
         <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Community & Partner Celebration</span>
         <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff !important; letter-spacing: -0.02em; line-height: 1.1;">Thank You for Fueling Our Mission</h1>
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Action Call / Dual Button Navigation Hub -->
+      <!-- Dual Button Navigation Hub -->
       <div style="background: rgba(15, 23, 42, 0.4); padding: 2.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
         <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem; font-weight: 700;">Ready to Make an Impact?</h3>
         <p style="color: #cbd5e1; max-width: 650px; margin: 0 auto 2rem auto; font-size: 1rem; line-height: 1.5;">
@@ -54,11 +54,9 @@
         </p>
         
         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <!-- Button 1: Jump to Full Categorized Wishlist Page -->
           <a href="supply.html" style="background: #27ae60; color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 12px rgba(39,174,96,0.4);">
             View Full Itemized Needs List &rarr;
           </a>
-          <!-- Button 2: Connect / Contact Link -->
           <a href="index.html#contact" style="background: transparent; color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.3);">
             Connect With Our Team
           </a>
