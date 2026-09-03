@@ -6,126 +6,139 @@
   <title>The Veterans Resurgence Project - Watershed Stewards</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #0f172a; color: #ffffff; font-family: inherit; margin: 0; padding: 0;">
+<body style="background-color: #0f172a; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
 
-  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white;">VRP</div>
+  <!-- Navigation Bar -->
+  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
+    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP</div>
     <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center;">
-      <li><a href="index.html" style="color: #a3e635; text-decoration: none; font-weight: 600;">Home</a></li>
-      <li><a href="#training" style="color: white; text-decoration: none; font-weight: 600;">Training Tracks</a></li>
-      <li><a href="#partners" style="color: white; text-decoration: none; font-weight: 600;">Partners &amp; Governance</a></li>
-      <li><a href="#news" style="color: white; text-decoration: none; font-weight: 600;">Field Dispatches</a></li>
-      <li><a href="support.html" style="background: #27ae60; color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; font-weight: 700;">How You Can Help</a></li>
+      <li><a href="index.html" style="color: #a3e635; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Home</a></li>
+      <li><a href="#training" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Training Tracks</a></li>
+      <li><a href="#partners" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Partners & Governance</a></li>
+      <li><a href="#news" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Field Dispatches</a></li>
+      <li><a href="support.html" style="background: #27ae60; color: white; padding: 0.6rem 1.25rem; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: background 0.2s;">How You Can Help</a></li>
     </ul>
   </nav>
 
-  <main style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+  <main>
     
-    <section style="background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('hero-watershed.jpg') center/cover no-repeat; padding: 5rem 2rem; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.4); margin-bottom: 4rem; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
-      <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1.5rem;">The Veteran Resurgence Project</span>
-      <h1 style="font-size: 3.2rem; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; letter-spacing: -0.02em; line-height: 1.1;">Healing Ecosystems. Rebuilding Lives.</h1>
-      <p style="font-size: 1.2rem; line-height: 1.6; color: #e2e8f0; max-width: 850px; margin: 0 auto 2.5rem auto;">
-        The Veterans Resurgence Project bridges the gap between post-military transition and environmental stewardship. Operating under a disciplined 0800-hour cohort model, we deploy veteran teams to restore fire-damaged public and private watersheds across Linn County and the Willamette Valley. By combining hands-on wildland mitigation with advanced technical certifications, we build resilient ecosystems while launching veterans into lifelong, sustainable natural resource careers.
+    <!-- HERO COVER SECTION WITH ORIGINAL PHOTO & TEXT -->
+    <section style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('Screenshot_20260421-000340.png') center/cover no-repeat; padding: 8rem 2rem; text-align: center; border-bottom: 4px solid #a3e635; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+      
+      <!-- LARGE MAIN TITLE -->
+      <h1 style="font-size: 4rem; font-weight: 900; margin: 0 0 0.5rem 0; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
+        Watershed Stewards
+      </h1>
+      
+      <!-- SECONDARY TITLE -->
+      <p style="font-size: 1.75rem; font-weight: 600; margin: 0 0 1.5rem 0; color: #ffffff; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); letter-spacing: 1px;">
+        Veterans Resurgence Project
       </p>
       
+      <!-- SHORT STATEMENT -->
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #f0f0f0; max-width: 700px; margin: 0 auto 3rem auto; font-weight: 300; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
+        Healing Ecosystems. Rebuilding Lives. A disciplined 0800-hour veteran cohort restoring watersheds across the Willamette Valley.
+      </p>
+      
+      <!-- CALL TO ACTION BUTTONS -->
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="support.html" style="background: #27ae60; color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 12px rgba(39,174,96,0.4);">
-          How You Can Help &rarr;
+        <a href="support.html" style="background: #27ae60; color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 15px rgba(39,174,96,0.5); text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s;">
+          Support Our Mission
         </a>
-        <a href="#training" style="background: rgba(255,255,255,0.1); color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3);">
-          Explore Training Tracks &darr;
-        </a>
-      </div>
-    </section>
-
-    <section id="training" style="margin-bottom: 4rem;">
-      <div style="text-align: center; margin-bottom: 2.5rem;">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Core Training Tracks &amp; Vocational Pathways</h2>
-        <p style="color: #94a3b8; font-size: 1rem;">Structured curriculum tiers guiding participants from foundational military discipline to advanced ecological leadership.</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
-        
-        <div style="background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="color: #fbd38d; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.75rem;">Ground Sawyer &amp; Wildland Mitigation</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin: 0;">Intensive felling, bucking, flash-fuel reduction, and defensible space establishment utilizing professional Pulaskis, McLeod tools, and chainsaws.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="color: #a3e635; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.75rem;">Aerial Drone Mapping &amp; GIS</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin: 0;">Commercial thermal and RGB aerial mapping training, flight telemetry logging, offline GIS data collection, and burn-scar ecological evaluation.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="color: #63b3ed; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.75rem;">Greenhouse &amp; Nursery Propagation</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin: 0;">Dedicated greenhouse management tracks focusing on native seed propagation, soil science, and plant survival tracking for disabled veterans.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="color: #fbd38d; font-size: 1.1rem; margin-top: 0; margin-bottom: 0.75rem;">Crew Leadership &amp; Logistics</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin: 0;">Advanced administrative training covering site staging, chain-of-command protocols, and 100-Point Merit Ledger tracking benchmarks.</p>
-        </div>
-
-      </div>
-
-      <div style="text-align: center;">
-        <a href="training-details.html" style="background: #144d29; color: white; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.2); display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-          View Detailed Training Information, Merit Ledger &amp; Up-Skilling Loop &rarr;
+        <a href="#training" style="background: rgba(255,255,255,0.15); color: white; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(3px); transition: background 0.2s;">
+          Explore Training
         </a>
       </div>
     </section>
 
-    <section id="partners" style="background: #1e293b; padding: 3rem 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 4rem;">
-      <div style="text-align: center; margin-bottom: 2.5rem;">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Partnerships, Research &amp; Governance</h2>
-        <p style="color: #94a3b8; font-size: 1rem;">Transparent operational frameworks maintaining strict non-profit compliance and strong institutional alliances.</p>
-      </div>
+    <div style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+      
+      <!-- TRAINING TRACKS HIGHLIGHTS SECTION -->
+      <section id="training" style="margin-bottom: 5rem;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; letter-spacing: -0.5px;">Core Training Tracks & Vocational Pathways</h2>
+          <p style="color: #94a3b8; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Structured curriculum guiding participants from foundational military discipline to advanced ecological leadership.</p>
+        </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 10px; border-left: 4px solid #a3e635;">
-          <h3 style="color: white; margin-top: 0; font-size: 1.2rem;">OSU Extension &amp; Research</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Executing evidence-based land stabilization, soil core testing, and erosion control backed by regional university research protocols.</p>
-        </div>
-        <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 10px; border-left: 4px solid #63b3ed;">
-          <h3 style="color: white; margin-top: 0; font-size: 1.2rem;">Private Timber &amp; Logging Alliances</h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Renewable MOUs where industry partners serve as non-voting Technical Advisory Board members, providing safety oversight and career pipelines.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="news" style="margin-bottom: 2rem;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-        <div>
-          <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin: 0 0 0.5rem 0;">Weekly Field Dispatches</h2>
-          <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Recent updates and photo logs from active veteran restoration sweeps.</p>
-        </div>
-        <div>
-          <a href="gallery.html" style="color: #a3e635; text-decoration: none; font-weight: 700;">View Full Gallery &rarr;</a>
-        </div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-        
-        <div style="background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-          <div style="background: #334155; height: 200px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 600;">
-            [Weekly Field Photo: Waterloo Park Sweep]
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          
+          <!-- Track 1: Ground Sawyer -->
+          <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #fbd38d; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Ground Sawyer & Wildland Mitigation</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Intensive felling, bucking, flash-fuel reduction, and defensible space establishment utilizing professional Pulaskis, McLeod tools, and chainsaws.</p>
           </div>
-          <div style="padding: 1.75rem;">
-            <span style="color: #a3e635; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Week 34 Update</span>
-            <h3 style="color: white; font-size: 1.25rem; margin: 0.5rem 0 1rem 0;">Waterloo Park Defensible Space Milestone</h3>
-            <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin: 0 0 1.25rem 0;">Our morning cohort successfully completed the 24-hour flash-fuel reduction window, clearing high-risk ladder fuels and securing perimeter zones.</p>
-            <a href="gallery.html" style="color: #63b3ed; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Dispatch Photos &rarr;</a>
+
+          <!-- Track 2: Aerial Drone Mapping -->
+          <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #a3e635; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Aerial Drone Mapping & GIS</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Commercial thermal and RGB aerial mapping training, flight telemetry logging, offline GIS data collection, and burn-scar ecological evaluation.</p>
+          </div>
+
+          <!-- Track 3: Greenhouse Propagation -->
+          <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #63b3ed; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Greenhouse & Nursery Propagation</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Dedicated greenhouse management tracks focusing on native seed propagation, soil science, and plant survival tracking for disabled veterans.</p>
+          </div>
+
+          <!-- Track 4: Crew Leadership -->
+          <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #fbd38d; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Crew Leadership & Logistics</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Advanced administrative training covering site staging, chain-of-command protocols, and 100-Point Merit Ledger tracking benchmarks.</p>
+          </div>
+
+        </div>
+
+        <!-- Action Button to Detailed Training Info -->
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="training-details.html" style="background: #144d29; color: white; padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.2); display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.2s; font-size: 1.1rem;">
+            View Full Training Curricula & Merit Ledger &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- PARTNERSHIPS & GOVERNANCE SECTION -->
+      <section id="partners" style="background: #1e293b; padding: 4rem 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+        <div style="text-align: center; margin-bottom: 3.5rem;">
+          <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; letter-spacing: -0.5px;">Partnerships, Research & Governance</h2>
+          <p style="color: #94a3b8; font-size: 1.1rem; max-width: 650px; margin: 0 auto;">We operate with transparent frameworks, strictly maintaining non-profit compliance while leveraging strong institutional and industry alliances.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+          
+          <!-- Card: OSU Research -->
+          <div style="background: rgba(15, 23, 42, 0.5); padding: 2.5rem; border-radius: 16px; border-left: 5px solid #a3e635;">
+            <h3 style="color: white; margin-top: 0; font-size: 1.4rem; margin-bottom: 1rem;">OSU Extension & Research</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Executing evidence-based land stabilization, soil core testing, and erosion control backed by regional university research protocols.</p>
+          </div>
+          
+          <!-- Card: Private Timber MOUs -->
+          <div style="background: rgba(15, 23, 42, 0.5); padding: 2.5rem; border-radius: 16px; border-left: 5px solid #63b3ed;">
+            <h3 style="color: white; margin-top: 0; font-size: 1.4rem; margin-bottom: 1rem;">Private Timber & Logging Alliances</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Renewable MOUs where industry partners serve as non-voting Technical Advisory Board members, providing safety oversight and direct career pipelines.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RECENT NEWS & FIELD DISPATCHES SECTION -->
+      <section id="news" style="margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin: 0 0 0.5rem 0; letter-spacing: -0.5px;">Weekly Field Dispatches</h2>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Recent updates, photos, and impact logs from active veteran restoration sweeps.</p>
+          </div>
+          <div>
+            <a href="gallery.html" style="color: #a3e635; text-decoration: none; font-weight: 700; font-size: 1.1rem;">View Full Gallery &rarr;</a>
           </div>
         </div>
 
-      </div>
-    </section>
-
-  </main>
-
-  <footer style="background: #144d29; padding: 2rem; text-align: center; color: #cbd5e1; font-size: 0.9rem; margin-top: 4rem;">
-    <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Cascadia Forestry Solutions LLC. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+          
+          <!-- Dispatch Card: Waterloo Park -->
+          <div style="background: #1e293b; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0px)'">
+            <div style="background: #334155; height: 220px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              [Weekly Field Photo: Waterloo Park Sweep]
+            </div>
+            <div style="padding: 2rem;">
+              <span style="color: #a3e635; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Week 34 Update</span>
+              <h3 style="color: white; font-size: 1.5
