@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+        <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watership Stewards</title>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); 
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">WS</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#tree-of-life">Framework</a></li>
+      <li><a href="#wishlist">Wish List</a></li>
+      <li><a href="#program-overview">Why It Matters</a></li>
+      <li><a href="gallery.html">Field Gallery</a></li>
+      <li><a href="#contact" class="btn-nav">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Background Image -->
+  <header id="hero" class="hero-header">
+    <h2 class="brand-subtitle" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #ddd;">Watership Stewards</h2>
+    <h1 style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; color: #fff;">The Veteran Resurgence Project</h1>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Post-wildfire watershed restoration and community resilience initiatives across Linn County and the Willamette Valley.</p>
+    <a href="#tree-of-life" class="btn-hero" style="display: inline-block; margin-top: 1.5rem; background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore Our Model</a>
+  </header>
+
+  <!-- Button Border Bar Directly Underneath Hero Image -->
+  <div style="background-color: #1e6b3c; padding: 12px 20px; border-radius: 0 0 12px 12px; max-width: 1200px; margin: -2rem auto 2rem auto; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; z-index: 10;">
+    <a href="partners.html" style="background: #144d29; color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2);">View Partners</a>
+    <a href="gallery.html" style="background: #144d29; color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2);">Field Gallery</a>
+    <a href="#wishlist" style="background: #144d29; color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2);">Support Wish List</a>
+  </div>
+<!-- Project Overview Banner Section -->
+  <section class="overview-banner-section" style="background-color: #1e6b3c; color: white; padding: 50px 20px; text-align: center; border-radius: 12px; max-width: 1200px; margin: 0 auto 2rem auto;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;">Restoring Our Landscape, Empowering Our Veterans</h2>
+      <p style="font-size: 1.15rem; line-height: 1.6; color: #f9f9f9 !important; margin-bottom: 0;">
+        The Veteran Resurgence Project unites military discipline with environmental stewardship. Across Linn County and the Willamette Valley, our dedicated crews work year-round to heal fire-damaged watersheds, mitigate topsoil erosion, and provide valuable research data through strategic collaborations with private and academic partners—transforming critical recovery missions into stable, purpose-driven careers for those who have served.
+      </p>
+    </div>
+  </section>
+
+<!-- Tree of Life Conceptual Framework Section -->
+  <section id="tree-of-life" style="background: #1b4332 !important; color: #ffffff !important; padding: 4rem 2rem; border-radius: 12px; max-width: 1200px; margin: 0 auto; font-family: inherit;">
+    <!-- Detailed Wishlist & Resource Needs Section -->
+  <section id="wishlist-detailed" style="background: #1b4332 !important; color: #ffffff !important; padding: 4rem 2rem; border-radius: 12px; max-width: 1200px; margin: 3rem auto 0 auto; font-family: inherit;">
+    
+    <!-- Section Header -->
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.75rem; color: #ffffff !important; letter-spacing: -0.02em;">Project Wishlist & Resource Manifest</h2>
+      <p style="font-size: 1.15rem; line-height: 1.6; color: #cbd5e1 !important; margin: 0 auto;">From heavy field infrastructure down to specialized advisory roles and trade-for-work partnerships, explore the exact resources required to scale our watershed restoration and veteran resurgence missions.</p>
+    </div>
+
+    <!-- Categories Container -->
+    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+
+      <!-- Tier 1: Capital & Heavy Infrastructure (Largest) -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #4A6B35;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #eef2ed; color: #4A6B35; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Tier 1</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Capital & Heavy Infrastructure</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Utility / Crew Transport Vehicle</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">4x4 truck or utility van for transporting crews and gear safely to remote Tillamook and Santiam forest zones.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Mobile Command & Tool Trailer</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Enclosed dual-axle cargo trailer to store, secure, and transport field restoration tools and drone equipment on-site.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 2: Field Equipment & Technology (Medium) -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #1e6b3c;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #e8f5e9; color: #1e6b3c; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Tier 2</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Field Equipment & Technology</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Commercial Mapping Drones (UAS)</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Enterprise-grade drones with high-resolution sensors for post-wildfire erosion aerial mapping and timber assessment.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Chainsaws & Forestry Gear</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Professional-grade clearing saws, chaps, helmets, and safety communications gear for clearing trail/stream debris.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 3: Small Tools & Consumables (Smallest) -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #4A6B35;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #eef2ed; color: #4A6B35; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Tier 3</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Small Tools & Daily Consumables</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Hand Restoration Tools</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Pulaskis, McLeod fire tools, heavy mattocks, shovels, and rock bars for manual trail and bank stabilization.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Field Safety Kits & PPE</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Trauma first-aid kits, eye protection, heavy work gloves, flagging tape, and high-visibility field vests.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 4: Trade for Work Needs -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #1e6b3c;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #e8f5e9; color: #1e6b3c; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Barter & Trade</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Trade-for-Work Partnerships</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Heavy Equipment Operator Services</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Exchanging volunteer watershed labor and trail maintenance hours for excavator/grader time on stubborn access roads.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Mechanical & Fleet Maintenance</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Partnering with local mechanics to service project transport in exchange for community land-clearing or promotional placement.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 5: Advisors & Professional Guidance -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #27ae60;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #e8f5e9; color: #27ae60; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Advisors</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Advisors & Professional Expertise</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Silviculture & Forestry Advisors</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Professional guidance from state/private forestry specialists to ensure compliance with Oregon Department of Forestry guidelines.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Grant Writing & Nonprofit Compliance Counsel</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Experienced advisors to help scale funding applications, watershed infrastructure partnerships, and veteran outreach integration.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!-- Section Header -->
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.75rem; color: #ffffff !important; letter-spacing: -0.02em;">Roots of Support, Fruits of Impact</h2>
+      <p style="font-size: 1.15rem; line-height: 1.6; color: #cbd5e1 !important; margin: 0 auto;">Every successful initiative relies on a deeply integrated ecosystem. Just like a mature tree, our work draws strength from foundational roots, rises through structural core infrastructure, and yields tangible, sustainable outcomes for our community.</p>
+    </div>
+
+    <!-- Unified Framework Container -->
+    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+
+      <!-- Tier 1: Foundation -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #4A6B35;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #eef2ed; color: #4A6B35; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Foundation</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Foundational Roots (Our Support Base)</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Veteran Alliances</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Strategic networks uniting military veterans for environmental leadership.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 2: Structure -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #1e6b3c;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #e8f5e9; color: #1e6b3c; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Structure</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Core Infrastructure (The Trunk & Mechanism)</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Training Programs</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Specialized technical education in heavy trade logistics, safety compliance, and land management.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Safety & Operational Protocols</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Rigorous field safety standards ensuring transparent, precise, and secure mission execution.</p>
+          </div>
+        </div>
+
+        <!-- FAA Drone Module (Full Width) -->
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #1e6b3c;">
+          <h4 style="font-size: 1.25rem; color: #0f172a !important; font-weight: 700; margin-bottom: 0.75rem;">FAA Part 107 Commercial Drone Licensing & Certification Track</h4>
+          <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;"><strong style="color: #0f172a !important;">Core Certification Standard:</strong> Participants in The Watershed Stewards' technical training track prepare for and test to obtain the FAA Part 107 Remote Pilot Certificate, the legal standard required to operate Uncrewed Aerial Systems (UAS) for commercial data collection, mapping, and research in the United States.</p>
+          <p style="color: #0f172a !important; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem;">Structured 30-Day "Green Zone" Training Curriculum:</p>
+          <ul style="margin: 0 0 0 1.25rem; padding: 0; color: #334155 !important; font-size: 0.95rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong style="color: #0f172a !important;">Indoor Ground School:</strong> A focused, 30-day foundational training track covering airspace classification, weather reporting (METARs/TAF), operational restrictions, loading/performance calculations, and emergency procedures.</li>
+            <li><strong style="color: #0f172a !important;">Testing & Voucher Support:</strong> The program coordinates study materials and certification pathways to help participants pass the official FAA knowledge test and secure commercial remote pilot credentials.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tier 3: Impact -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #4A6B35;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #eef2ed; color: #4A6B35; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Impact</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Fruits of Impact & Community Resilience</h3>
+        </div>
+        <div style="background: #f8fafc; padding: 1.75rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+          <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Community Resilience & Local Partnerships</h4>
+          <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Forging direct collaborative networks across Linn County to ensure sustainable municipal waste integration, public land stewardship, and long-term regional stability.</p>
+        </div>
+      </div>
+
+      <!-- Tier 4: Outcomes -->
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-left: 6px solid #27ae60;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span style="background: #e8f5e9 !important; color: #27ae60; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 20px;">Outcomes</span>
+          <h3 style="color: #1b4332 !important; font-size: 1.4rem; font-weight: 700; margin: 0;">Sustainable Branches & Fruits (Tangible Outcomes)</h3>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Watershed Defense</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Mitigating topsoil erosion, protecting Willamette Valley waterways, and preventing mudslides.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h4 style="color: #0f172a !important; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Timber Recovery</h4>
+            <p style="color: #334155 !important; font-size: 0.95rem; line-height: 1.6; margin: 0;">Unlocking salvage timber from rot, clearing stream-clogging debris safely.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+  </section>
+  <!-- Wish List Section -->
+  <section id="wishlist" class="wishlist-section">
+    <div class="container">
+      <h2>Operational Wish List</h2>
+    
+      
+      <div class="wishlist-grid">
+        <div class="wishlist-card" data-item="field-tools">
+          <h3>Field Tools</h3>
+          <p>Pulaskis, mattocks, hand saws, and heavy-duty shovels for trail and slope stabilization.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 5 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+        
+        <div class="wishlist-card" data-item="soil-kits">
+          <h3>Soil Testing Kits</h3>
+          <p>Advanced chemical and nutrient testing kits to evaluate burn severity and recovery viability.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 10 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="ppe">
+          <h3>Safety Equipment (PPE)</h3>
+          <p>High-visibility gear, helmets, durable boots, and eye protection for field personnel.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 15 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="drone">
+          <h3>Drone Hardware</h3>
+          <p>Aerial mapping drones to assess hard-to-reach watershed damage and erosion patterns.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 2 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="trailers">
+          <h3>Transport Trailers</h3>
+          <p>Utility trailers for hauling gear, tools, and native planting materials to remote sites.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 1 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="comms">
+          <h3>Communications Gear</h3>
+          <p>Rugged two-way radios and field comms for remote operations where cell service fails.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 6 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+      </div>
+
+      <!-- Donation Form Box -->
+      <div id="donate-form" class="donate-form-box">
+        <h3>Operational Support Contribution</h3>
+        <form>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Select Wish List Item to Support</label>
+            <select name="item">
+              <option value="field-tools">Field Tools</option>
+              <option value="soil-kits">Soil Testing Kits</option>
+              <option value="ppe">Safety Equipment (PPE)</option>
+              <option value="drone">Drone Hardware</option>
+              <option value="trailers">Transport Trailers</option>
+              <option value="comms">Communications Gear</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Submit Pledge</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Talking Points & Program Overview Section -->
+  <section id="program-overview" class="overview-section">
+    <div class="container overview-container">
+      <h2>Why This Work Matters</h2>
+      
+      
+      <div class="overview-grid">
+        <div class="overview-card">
+          <h3>Watershed & Soil Defense</h3>
+          <p>High-severity burn scars strip slopes of vital root structures, leaving local hillsides vulnerable to severe topsoil erosion, silt-laden runoff, and mudslides during heavy winter rainfalls. Rapid field intervention—including manual stabilization, check-dam construction, and strategic reseeding—safeguards Willamette Valley waterways, protects critical municipal water infrastructure, and preserves delicate aquatic habitats from choking sediment.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Purpose-Driven Veteran Careers</h3>
+          <p>Returning service members possess unmatched discipline, adaptability, and teamwork under pressure. This initiative channels those invaluable assets into environmental stewardship, offering veterans stable employment, specialized technical training in heavy trade logistics and land management, and a renewed sense of mission while healing the very public lands they call home.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Measurable Regional Resilience</h3>
+          <p>Every dollar and piece of equipment is deployed with absolute transparency and tactical precision. By pairing advanced aerial drone mapping with rigorous ground-level labor, we identify high-priority damage zones immediately, ensuring community contributions create direct, long-lasting ecological security across Linn County.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Timber Recovery & Economic Synergy</h3>
+          <p>Clearing fire-damaged corridors safely unlocks valuable merchantable and salvage timber that would otherwise rot on the stump or wash down into local river systems, creating hazardous log jams and clogging waterways. By routing 100% of the heavy equipment operations through local loggers and regional nurseries, every phase of our work directly stimulates the local resource economy, keeps specialized trade dollars in the community, and sources native replacement plantings locally.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Academic & Research Collaboration</h3>
+          <p>Our field teams partner directly with regional college research departments to track post-wildfire slope stabilization, soil regeneration metrics, and planting survival rates over multi-year cycles. This ongoing data collection turns every restoration site into a living laboratory, validating best practices for Pacific Northwest watershed recovery while giving students hands-on field experience in environmental science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="overview-card">
+          <h3>Community Resilience & Local Partnerships</h3>
+          <p>Collaborating directly with regional agencies, county parks, and municipal task forces ensures our restoration efforts align with broader public safety goals. By engaging local communities and civic networks, we foster a unified front against environmental hazards, strengthening long-term ecological infrastructure across Linn County and the Willamette Valley.</p>  
+</div>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p>Partner with us on post-wildfire watershed recovery across Linn County.</p>
+      <p style="margin-bottom: 1.5rem;"><a href="partners.html" style="color: #a3c1ad; text-decoration: underline; font-weight: bold;">View Our Partners & Donors Page →</a></p>
+      <p>Email: info@veteranresurgenceproject.org</p>
+    </div>
+  </footer>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+        <div class="wishlist-card" data-item="trailers">
+          <h3>Transport Trailers</h3>
+          <p>Utility trailers for hauling gear, tools, and native planting materials to remote sites.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 1 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+
+        <div class="wishlist-card" data-item="comms">
+          <h3>Communications Gear</h3>
+          <p>Rugged two-way radios and field comms for remote operations where cell service fails.</p>
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span class="funded-text">0 / 6 Funded</span>
+              <span class="percent-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <a href="#donate-form" class="btn-card">Fund This Item</a>
+        </div>
+      </div>
+
+      <!-- Donation Form Box -->
+      <div id="donate-form" class="donate-form-box">
+        <h3>Operational Support Contribution</h3>
+        <form>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Select Wish List Item to Support</label>
+            <select name="item">
+              <option value="field-tools">Field Tools</option>
+              <option value="soil-kits">Soil Testing Kits</option>
+              <option value="ppe">Safety Equipment (PPE)</option>
+              <option value="drone">Drone Hardware</option>
+              <option value="trailers">Transport Trailers</option>
+              <option value="comms">Communications Gear</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Submit Pledge</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Talking Points & Program Overview Section -->
+  <section id="program-overview" class="overview-section">
+    <div class="container overview-container">
+      <h2>Why This Work Matters</h2>
+      
+      
+      <div class="overview-grid">
+        <div class="overview-card">
+          <h3>Watershed & Soil Defense</h3>
+          <p>High-severity burn scars strip slopes of vital root structures, leaving local hillsides vulnerable to severe topsoil erosion, silt-laden runoff, and mudslides during heavy winter rainfalls. Rapid field intervention—including manual stabilization, check-dam construction, and strategic reseeding—safeguards Willamette Valley waterways, protects critical municipal water infrastructure, and preserves delicate aquatic habitats from choking sediment.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Purpose-Driven Veteran Careers</h3>
+          <p>Returning service members possess unmatched discipline, adaptability, and teamwork under pressure. This initiative channels those invaluable assets into environmental stewardship, offering veterans stable employment, specialized technical training in heavy trade logistics and land management, and a renewed sense of mission while healing the very public lands they call home.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Measurable Regional Resilience</h3>
+          <p>Every dollar and piece of equipment is deployed with absolute transparency and tactical precision. By pairing advanced aerial drone mapping with rigorous ground-level labor, we identify high-priority damage zones immediately, ensuring community contributions create direct, long-lasting ecological security across Linn County.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Timber Recovery & Economic Synergy</h3>
+          <p>Clearing fire-damaged corridors safely unlocks valuable merchantable and salvage timber that would otherwise rot on the stump or wash down into local river systems, creating hazardous log jams and clogging waterways. By routing 100% of the heavy equipment operations through local loggers and regional nurseries, every phase of our work directly stimulates the local resource economy, keeps specialized trade dollars in the community, and sources native replacement plantings locally.</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Academic & Research Collaboration</h3>
+          <p>Our field teams partner directly with regional college research departments to track post-wildfire slope stabilization, soil regeneration metrics, and planting survival rates over multi-year cycles. This ongoing data collection turns every restoration site into a living laboratory, validating best practices for Pacific Northwest watershed recovery while giving students hands-on field experience in environmental science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="overview-card">
+          <h3>Community Resilience & Local Partnerships</h3>
+          <p>Collaborating directly with regional agencies, county parks, and municipal task forces ensures our restoration efforts align with broader public safety goals. By engaging local communities and civic networks, we foster a unified front against environmental hazards, strengthening long-term ecological infrastructure across Linn County and the Willamette Valley.</p>  
+</div>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <h2>Get Involved</h2>
+      <p>Partner with us on post-wildfire watershed recovery across Linn County.</p>
+      <p style="margin-bottom: 1.5rem;"><a href="partners.html" style="color: #a3c1ad; text-decoration: underline; font-weight: bold;">View Our Partners & Donors Page →</a></p>
+      <p>Email: info@veteranresurgenceproject.org</p>
+    </div>
+  </footer>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
