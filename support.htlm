@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How You Can Help - Watership Stewards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #0f172a; color: #ffffff; font-family: inherit; margin: 0; padding: 0;">
+
+  <!-- Simple Navigation Bar -->
+  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white;">WS</div>
+    <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
+      <li><a href="index.html" style="color: white; text-decoration: none; font-weight: 600;">&larr; Back to Home</a></li>
+      <li><a href="supply.html" style="color: #a3e635; text-decoration: none; font-weight: 600;">Full Wishlist Manifest</a></li>
+    </ul>
+  </nav>
+
+  <!-- CELEBRATION & DONOR IMPACT LANDING SECTION -->
+  <main style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+    <section style="background: #144d29 !important; color: #ffffff !important; padding: 4rem 2rem; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.25);">
+      
+      <!-- Hero / Celebration Header -->
+      <div style="text-align: center; max-width: 850px; margin: 0 auto 3rem auto;">
+        <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Community & Partner Celebration</span>
+        <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff !important; letter-spacing: -0.02em; line-height: 1.1;">Thank You for Fueling Our Mission</h1>
+        <p style="font-size: 1.2rem; line-height: 1.6; color: #e2e8f0 !important; margin: 0;">
+          Because of our dedicated donors, volunteers, and tactical partners, the Watership Stewards continue to heal fire-damaged watersheds across Linn County and the Willamette Valley. Every contribution directly empowers transitioning veterans with stable, purpose-driven environmental restoration careers.
+        </p>
+      </div>
+
+      <!-- Impact Highlights Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); text-align: center;">
+          <h3 style="font-size: 2.2rem; color: #a3e635; font-weight: 800; margin-bottom: 0.5rem;">100%</h3>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0;">Direct deployment of resources into local watershed recovery and veteran support fields.</p>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); text-align: center;">
+          <h3 style="font-size: 2.2rem; color: #63b3ed; font-weight: 800; margin-bottom: 0.5rem;">Active</h3>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0;">Year-round erosion control, trail restoration, and ecological field monitoring crews.</p>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); text-align: center;">
+          <h3 style="font-size: 2.2rem; color: #fbd38d; font-weight: 800; margin-bottom: 0.5rem;">Vital</h3>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0;">Strategic alliances with academic institutions, agencies, and private landowners.</p>
+        </div>
+      </div>
+
+      <!-- Action Call / Dual Button Navigation Hub -->
+      <div style="background: rgba(15, 23, 42, 0.4); padding: 2.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem; font-weight: 700;">Ready to Make an Impact?</h3>
+        <p style="color: #cbd5e1; max-width: 650px; margin: 0 auto 2rem auto; font-size: 1rem; line-height: 1.5;">
+          Whether you want to offer professional trade services, support our field logistics, or view our comprehensive operational manifest, your involvement changes lives.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <!-- Button 1: Jump to Full Categorized Wishlist Page -->
+          <a href="supply.html" style="background: #27ae60; color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 12px rgba(39,174,96,0.4);">
+            View Full Itemized Needs List &rarr;
+          </a>
+          <!-- Button 2: Connect / Contact Link -->
+          <a href="index.html#contact" style="background: transparent; color: white; padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.3);">
+            Connect With Our Team
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
