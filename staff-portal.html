@@ -39,7 +39,49 @@
         <a href="index.html" style="background: #334155; color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem;">Exit Portal</a>
       </div>
     </header>
+<!-- Staff Dispatch Entry Form -->
+<div style="background: #1e293b; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; margin-bottom: 2rem;">
+  <h3 style="color: #ffffff; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Publish New Operational Dispatch</h3>
+  
+  <form onsubmit="handleNewDispatch(event)">
+    <div style="margin-bottom: 1rem;">
+      <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Date / Timeline Tag</label>
+      <input type="text" id="dispatchDate" required placeholder="e.g., Oct 2026" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 1rem;">
+      <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Dispatch Title</label>
+      <input type="text" id="dispatchTitle" required placeholder="e.g., Phase III Sector Deployment" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white; box-sizing: border-box;">
+    </div>
 
+    <div style="margin-bottom: 1rem;">
+      <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Description / Details</label>
+      <textarea id="dispatchDesc" required rows="3" placeholder="Enter brief operational summary..." style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white; box-sizing: border-box; resize: vertical;"></textarea>
+    </div>
+
+    <button type="submit" style="background: #27ae60; color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Publish Dispatch</button>
+  </form>
+</div>
+
+<script>
+  function handleNewDispatch(event) {
+    event.preventDefault();
+    
+    const newUpdate = {
+      date: document.getElementById("dispatchDate").value.trim(),
+      title: document.getElementById("dispatchTitle").value.trim(),
+      desc: document.getElementById("dispatchDesc").value.trim()
+    };
+
+    // Pull existing updates, add new one to the front
+    let updates = JSON.parse(localStorage.getItem("vrp_updates") || "[]");
+    updates.unshift(newUpdate);
+    localStorage.setItem("vrp_updates", JSON.stringify(updates));
+
+    alert("Dispatch successfully published to public feed!");
+    event.target.reset();
+  }
+      </script>
     <!-- Queue List Container -->
     <main>
       <div id="queueContainer">
