@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Commitment Portal | VRP Watership Stewards</title>
+</head>
+<body style="background: #0f172a; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;">
+
+  <!-- Header Section -->
+  <header style="text-align: center; padding: 3rem 1rem 1rem 1rem; border-bottom: 1px solid #334155;">
+    <span style="background: rgba(39,174,96,0.15); color: #27ae60; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 0.75rem;">Final Action Gateway</span>
+    <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #ffffff;">Secure Your Commitment</h1>
+    <p style="font-size: 1.1rem; color: #94a3b8; margin: 0; max-width: 600px; margin-left: auto; margin-right: auto;">Choose your avenue of support, submit your details, and lock in your active role within our Linn County watershed restoration network.</p>
+  </header>
+
+  <!-- Main Signup & Selection Container -->
+  <main style="max-width: 700px; margin: 3rem auto; padding: 0 2rem;">
+    
+    <div style="background: #1e293b; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+      
+      <form onsubmit="handleCommitmentSubmission(event)">
+        
+        <!-- Contact Information Fields -->
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; color: #cbd5e1; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Your Name / Call Sign</label>
+          <input type="text" id="supporterName" required placeholder="Enter full name or identifier" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1rem; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; color: #cbd5e1; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Contact Email or Phone</label>
+          <input type="text" id="supporterContact" required placeholder="email@example.com or phone number" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1rem; box-sizing: border-box;">
+        </div>
+
+        <!-- Path Selection -->
+        <div style="margin-bottom: 2rem;">
+          <label style="display: block; color: #cbd5e1; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Select Your Support Track</label>
+          <select id="supportTrack" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1rem; box-sizing: border-box;">
+            <option value="Field Restoration Volunteer">Field Restoration &amp; Cleanup Volunteer</option>
+            <option value="Equipment & Supply Donor">Equipment &amp; Material Supply Donor</option>
+            <option value="Community Advocacy Partner">Community Advocacy &amp; Infrastructure Supporter</option>
+            <option value="Academic/Logistical Ally">Academic &amp; Logistical Partner</option>
+          </select>
+        </div>
+
+        <!-- Action Submit Button -->
+        <button type="submit" style="width: 100%; background: #27ae60; color: white; padding: 0.85rem; border-radius: 8px; border: none; font-weight: 700; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);">
+          Submit Information &amp; Notify Command &rarr;
+        </button>
+
+      </form>
+
+      <!-- Success Notification Confirmation Box -->
+      <div id="successBox" style="display: none; margin-top: 1.5rem; background: rgba(39,174,96,0.15); border: 1px solid #27ae60; padding: 1rem; border-radius: 8px; text-align: center;">
+        <p style="color: #a3e635; font-weight: 700; margin: 0 0 0.5rem 0;">Commitment Logged Successfully!</p>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin: 0 0 1rem 0;">Your information has been queued for staff review. Thank you for standing with the Watership Stewards.</p>
+        <a href="index.html" style="background: #27ae60; color: white; padding: 0.5rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-block;">Return to Home Page &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- Direct Escape Link Back to Gallery/Support -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="support.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600;">&larr; Back to Support &amp; Live Needs Overview</a>
+    </div>
+
+  </main>
+
+  <!-- LocalStorage Sync Script -->
+  <script>
+    function handleCommitmentSubmission(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById("supporterName").value.trim();
+      const contact = document.getElementById("supporterContact").value.trim();
+      const track = document.getElementById("supportTrack").value;
+      
+      // Package submission payload
+      const commitmentData = {
+        name: name,
+        contact: contact,
+        track: track,
+        timestamp: new Date().toLocaleString()
+      };
+
+      // Push to localStorage so it syncs straight into staff portal intake list
+      let existingIntake = JSON.parse(localStorage.getItem("vrp_intake_queue") || "[]");
+      existingIntake.unshift(commitmentData);
+      localStorage.setItem("vrp_intake_queue", JSON.stringify(existingIntake));
+
+      // Hide form, show success state with return home button
+      event.target.style.display = "none";
+      document.getElementById("successBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
