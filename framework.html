@@ -98,9 +98,9 @@
 
     <script>
       function checkStaffAccess() {
-        let passcode = prompt("6060");
+        let passcode = prompt("Enter 4-digit staff security passcode:");
         if (passcode === "6060") {
-          window.location.href = "inventory-log.html"; 
+          window.location.href = "staff-portal.html"; 
         } else if (passcode !== null) {
           alert("Incorrect security code. Access denied.");
         }
