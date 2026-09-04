@@ -27,7 +27,30 @@
       <li><a href="framework.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">&larr; Exit to Public Site</a></li>
     </ul>
   </nav>
+<!-- JavaScript Engine for LocalStorage Management -->
+  <script>
+    // --- PASSCODE GATE LOGIC ---
+    function verifyPasscode(event) {
+      event.preventDefault();
+      const enteredCode = document.getElementById("passcodeInput").value.trim();
+      const modal = document.getElementById("passcodeModal");
+      const errorText = document.getElementById("passcodeError");
 
+      if (enteredCode === "6060") {
+        modal.style.display = "none"; // Hide gate, reveal dashboard
+      } else {
+        errorText.style.display = "block";
+        document.getElementById("passcodeInput").value = "";
+      }
+    }
+
+    // --- INTAKE LOGIC ---
+    function getIntake() {
+      // (rest of your intake functions...)
+    }
+
+    // ... (all your other inventory and update functions follow)
+  </script>
   <!-- Main Container -->
   <main style="max-width: 1000px; margin: 0 auto; padding: 3rem 2rem;">
     
