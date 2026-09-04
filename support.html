@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How You Can Help & Inventory Status - Veterans Resurgence Project</title>
+  <title>How You Can Help & Resource Hub - Veterans Resurgence Project</title>
 </head>
 <body style="background-color: #0f172a; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
 
-  <!-- Navigation Bar -->
   <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
     <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP</div>
     <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; flex-wrap: wrap;">
@@ -22,93 +21,118 @@
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 4rem 2rem;">
     
-    <!-- Header Section -->
     <div style="border-bottom: 2px solid #334155; padding-bottom: 2rem; margin-bottom: 3rem;">
-      <span style="background: #27ae60; color: #ffffff; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Support &amp; Logistics</span>
-      <h1 style="font-size: 2.8rem; font-weight: 900; color: #ffffff; margin: 0 0 1rem 0; letter-spacing: -0.5px;">How You Can Help &amp; Resource Hub</h1>
+      <span style="background: #27ae60; color: #ffffff; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Support &amp; Community Hub</span>
+      <h1 style="font-size: 2.8rem; font-weight: 900; color: #ffffff; margin: 0 0 1rem 0; letter-spacing: -0.5px;">How You Can Help</h1>
       <p style="color: #94a3b8; font-size: 1.15rem; line-height: 1.6; margin: 0;">
-        Contribute directly to our asset-light operational mandate by tracking our active equipment wants and fulfilled inventory metrics below.
+        Partner with our disciplined veteran field cohorts through direct in-kind equipment contributions or schedule community protection service tiers.
       </p>
     </div>
 
-    <!-- Add New Item Control Card -->
-    <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem;">
-      <h3 style="color: #fbd38d; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Add / Update Inventory &amp; Want Item</h3>
-      <form id="itemForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 140px; gap: 1rem; align-items: end;">
-        <div>
-          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Item Description</label>
-          <input type="text" id="itemName" required placeholder="e.g. Chainsaw Chaps" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Category</label>
-          <input type="text" id="itemCat" required placeholder="e.g. Field Safety" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Quantity (+/- Balance)</label>
-          <input type="number" id="itemQty" required placeholder="e.g. -2 or +4" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
-        </div>
-        <button type="submit" style="background: #27ae60; color: white; padding: 0.75rem 1rem; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; height: 42px;">Add Item</button>
-      </form>
-    </section>
-
-    <!-- Live Inventory & Want List Tracker Section -->
-    <section style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 3rem;">
-      <h2 style="color: #a3e635; font-size: 1.5rem; margin-top: 0; margin-bottom: 0.5rem;">Dynamic Equipment &amp; Gear Ledger</h2>
-      <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 2rem;">Items transition automatically from the <strong>Want List</strong> to active <strong>Stock Inventory</strong> once quantities hit positive numbers.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-bottom: 4rem;">
       
-      <div style="overflow-x: auto;">
-        <table id="inventoryTable" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
-          <thead>
-            <tr style="border-bottom: 2px solid #334155; color: #cbd5e1;">
-              <th style="padding: 1rem;">Item Description</th>
-              <th style="padding: 1rem;">Category</th>
-              <th style="padding: 1rem; text-align: center;">Net Balance</th>
-              <th style="padding: 1rem; text-align: center;">Status Tracker</th>
-            </tr>
-          </thead>
-          <tbody style="color: #e2e8f0;">
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 1.25rem;">Spill-Proof Two-Stroke Fuel Storage Locker</td>
-              <td style="padding: 1.25rem; color: #94a3b8;">Site Safety</td>
-              <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #a3e635;">+2</td>
-              <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(163,230,53,0.15); color: #a3e635; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">In Stock (Inventory)</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 1.25rem;">Professional Pulaski &amp; McLeod Hand Tools</td>
-              <td style="padding: 1.25rem; color: #94a3b8;">Field Operations</td>
-              <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #a3e635;">+6</td>
-              <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(163,230,53,0.15); color: #a3e635; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">In Stock (Inventory)</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 1.25rem;">Commercial Thermal/RGB Mapping Drone Unit</td>
-              <td style="padding: 1.25rem; color: #94a3b8;">Technical Track</td>
-              <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #fbd38d;">0</td>
-              <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(251,211,141,0.15); color: #fbd38d; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Target Met / Ready</span></td>
-            </tr>
-            <tr>
-              <td style="padding: 1.25rem;">Heavy-Duty Field First Aid &amp; Trauma Kits</td>
-              <td style="padding: 1.25rem; color: #94a3b8;">Safety Triage</td>
-              <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #f87171;">-3</td>
-              <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(248,113,113,0.15); color: #f87171; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Active Want List</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <span style="background: rgba(163,230,53,0.15); color: #a3e635; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.8rem; border-radius: 12px; display: inline-block; margin-bottom: 1rem;">Asset-Light Mandate</span>
+          <h2 style="color: #a3e635; font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem;">In-Kind Gear &amp; Tool Contributions</h2>
+          <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            To respect our strict asset-light operational policies and prevent early equipment debt, we prioritize direct tool and gear contributions over cash. Donors can supply certified safety gear, professional Pulaskis, or spill-proof fuel lockers directly to our Waterloo Park operations hub.
+          </p>
+        </div>
+        <div>
+          <a href="#admin-ledger" style="background: #144d29; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; border: 1px solid rgba(255,255,255,0.2);">View Equipment Want List &rarr;</a>
+        </div>
+      </section>
 
-    <!-- Contribution Pathways -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-      <div style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-        <h3 style="color: #a3e635; font-size: 1.2rem; margin-top: 0;">In-Kind Gear Donation</h3>
-        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">To respect our strict asset-light policies, we prioritize direct tool and gear contributions over cash. Check our active want list above and contact our logistics coordinator to arrange drop-offs at the Waterloo Park hub.</p>
-      </div>
-      <div style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-        <h3 style="color: #63b3ed; font-size: 1.2rem; margin-top: 0;">Landowner Requests</h3>
-        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">Property owners looking to schedule our 16-to-24 hour free community wildland fire defense clearing tier can submit their site locations directly through our intake channels.</p>
-      </div>
+      <section style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <span style="background: rgba(99,179,237,0.15); color: #63b3ed; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.8rem; border-radius: 12px; display: inline-block; margin-bottom: 1rem;">Free Community Tier</span>
+          <h2 style="color: #63b3ed; font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem;">Landowner Access &amp; Service Requests</h2>
+          <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Property owners can apply for our 16-to-24 hour free community service tier. Our trained veteran squads execute hazardous brush reduction, ladder fuel thinning, and wildland fire defense clearing at zero cost under strict landowner waiver agreements.
+          </p>
+        </div>
+        <div>
+          <a href="agreements.html" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Submit Service Request &rarr;</a>
+        </div>
+      </section>
+
     </div>
 
-    <!-- Back to Home -->
+    <div id="admin-ledger" style="border-top: 2px solid #334155; padding-top: 3rem; margin-bottom: 3rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span style="background: rgba(251,211,141,0.15); color: #fbd38d; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.8rem; border-radius: 12px; display: inline-block; margin-bottom: 0.5rem;">Internal Management</span>
+          <h2 style="font-size: 2rem; font-weight: 800; color: #ffffff; margin: 0;">Administrative Inventory &amp; Want List Ledger</h2>
+        </div>
+        <div style="background: #1e293b; padding: 0.4rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.9rem;">
+          Restricted / Staff Control Panel
+        </div>
+      </div>
+
+      <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem;">
+        <h3 style="color: #fbd38d; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Log New Want / Inventory Item</h3>
+        <form id="itemForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 140px; gap: 1rem; align-items: end;">
+          <div>
+            <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Item Description</label>
+            <input type="text" id="itemName" required placeholder="e.g. Chainsaw Chaps" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Category</label>
+            <input type="text" id="itemCat" required placeholder="e.g. Field Safety" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem;">Quantity (+/- Balance)</label>
+            <input type="number" id="itemQty" required placeholder="e.g. -2 or +4" style="width: 100%; padding: 0.7rem; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px;">
+          </div>
+          <button type="submit" style="background: #27ae60; color: white; padding: 0.75rem 1rem; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; height: 42px;">Add Item</button>
+        </form>
+      </section>
+
+      <section style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
+        <p style="color: #94a3b8; font-size: 0.95rem; margin-top: 0; margin-bottom: 2rem;">Items transition automatically from the <strong>Want List</strong> to active <strong>Stock Inventory</strong> once quantities hit positive numbers.</p>
+        
+        <div style="overflow-x: auto;">
+          <table id="inventoryTable" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid #334155; color: #cbd5e1;">
+                <th style="padding: 1rem;">Item Description</th>
+                <th style="padding: 1rem;">Category</th>
+                <th style="padding: 1rem; text-align: center;">Net Balance</th>
+                <th style="padding: 1rem; text-align: center;">Status Tracker</th>
+              </tr>
+            </thead>
+            <tbody style="color: #e2e8f0;">
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1.25rem;">Spill-Proof Two-Stroke Fuel Storage Locker</td>
+                <td style="padding: 1.25rem; color: #94a3b8;">Site Safety</td>
+                <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #a3e635;">+2</td>
+                <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(163,230,53,0.15); color: #a3e635; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">In Stock (Inventory)</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1.25rem;">Professional Pulaski &amp; McLeod Hand Tools</td>
+                <td style="padding: 1.25rem; color: #94a3b8;">Field Operations</td>
+                <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #a3e635;">+6</td>
+                <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(163,230,53,0.15); color: #a3e635; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">In Stock (Inventory)</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1.25rem;">Commercial Thermal/RGB Mapping Drone Unit</td>
+                <td style="padding: 1.25rem; color: #94a3b8;">Technical Track</td>
+                <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #fbd38d;">0</td>
+                <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(251,211,141,0.15); color: #fbd38d; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Target Met / Ready</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 1.25rem;">Heavy-Duty Field First Aid &amp; Trauma Kits</td>
+                <td style="padding: 1.25rem; color: #94a3b8;">Safety Triage</td>
+                <td style="padding: 1.25rem; text-align: center; font-weight: 700; color: #f87171;">-3</td>
+                <td style="padding: 1.25rem; text-align: center;"><span style="background: rgba(248,113,113,0.15); color: #f87171; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Active Want List</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
     <div style="text-align: center; margin-top: 3rem;">
       <a href="index.html" style="background: #144d29; color: white; padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.2); display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
         &larr; Return to Home Page
@@ -117,12 +141,10 @@
 
   </main>
 
-  <!-- Footer -->
   <footer style="background: #144d29; padding: 2.5rem 2rem; text-align: center; color: #cbd5e1; font-size: 0.95rem; margin-top: 5rem; border-top: 1px solid rgba(255,255,255,0.1);">
     <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Cascadia Forestry Solutions LLC. All rights reserved.</p>
   </footer>
 
-  <!-- Interactive JavaScript Logic for Ledger Updates -->
   <script>
     document.getElementById('itemForm').addEventListener('submit', function(e) {
       e.preventDefault();
