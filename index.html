@@ -8,6 +8,7 @@
 </head>
 <body style="background-color: #0f172a; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
 
+  <!-- Navigation Bar -->
   <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
     <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP</div>
     <ul class="nav-links" style="list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; align-items: center; flex-wrap: wrap;">
@@ -22,33 +23,47 @@
 
   <main>
     
-    <section style="background: #0f172a; padding: 2rem 1rem; text-align: center; border-bottom: 4px solid #a3e635;">
-      <div style="max-width: 1100px; margin: 0 auto;">
+    <!-- HERO SECTION WITH TEXT OVERLAY ON TOP OF THE IMAGE -->
+    <section style="background: #0f172a; padding: 1.5rem 1rem 3rem 1.0rem; text-align: center;">
+      <div style="max-width: 1100px; margin: 0 auto; position: relative;">
         
-        <img src="Screenshot_20260421-000340.png" alt="Watershed Stewards - Veterans Resurgence Project" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: block; margin-bottom: 2rem;">
-        
-        <h1 style="font-size: 3rem; font-weight: 900; margin: 0 0 0.5rem 0; color: #ffffff; text-transform: uppercase; letter-spacing: 2px;">
-          Watershed Stewards
-        </h1>
-        
-        <p style="font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0; color: #a3e635; letter-spacing: 1px;">
-          Veterans Resurgence Project
-        </p>
-        
-        <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0; max-width: 750px; margin: 0 auto 2rem auto;">
-          Healing Ecosystems. Rebuilding Lives. A disciplined 0800-hour veteran cohort restoring watersheds across the Willamette Valley.
-        </p>
+        <!-- CONTAINER FOR IMAGE AND ABSOLUTE OVERLAY -->
+        <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.7);">
+          
+          <!-- THE ACTUAL IMAGE FILE RENDERED NATIVELY -->
+          <img src="Screenshot_20260421-000340.png" alt="Watershed Stewards - Veterans Resurgence Project" style="width: 100%; height: auto; display: block; filter: brightness(0.75);">
+          
+          <!-- TEXT OVERLAY POSITIONED DIRECTLY ON THE IMAGE -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; background: linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.85)); text-align: center;">
+            
+            <h1 style="font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 900; margin: 0 0 0.25rem 0; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
+              Watershed Stewards
+            </h1>
+            
+            <p style="font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 700; margin: 0 0 0.75rem 0; color: #a3e635; letter-spacing: 1px; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+              Veterans Resurgence Project
+            </p>
+            
+            <p style="font-size: clamp(0.95rem, 1.5vw, 1.15rem); line-height: 1.5; color: #e2e8f0; max-width: 700px; margin: 0 auto 1.5rem auto; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
+              Healing Ecosystems. Rebuilding Lives. A disciplined 0800-hour veteran cohort restoring watersheds across the Willamette Valley.
+            </p>
 
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="support.html" style="background: #27ae60; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Support Our Mission</a>
-          <a href="framework.html" style="background: #334155; color: #a3e635; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2);">View Framework &rarr;</a>
+            <!-- Quick Action Buttons Inside Overlay -->
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <a href="support.html" style="background: #27ae60; color: white; padding: 0.7rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Support Our Mission</a>
+              <a href="framework.html" style="background: rgba(51, 65, 85, 0.9); color: #a3e635; padding: 0.7rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3);">View Framework &rarr;</a>
+            </div>
+
+          </div>
         </div>
 
       </div>
     </section>
 
-    <div style="padding: 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+    <!-- REST OF THE PAGE CONTENT -->
+    <div style="padding: 1rem 1.5rem 3rem 1.5rem; max-width: 1200px; margin: 0 auto;">
       
+      <!-- TRAINING TRACKS HIGHLIGHTS SECTION -->
       <section id="training" style="margin-bottom: 5rem;">
         <div style="text-align: center; margin-bottom: 3rem;">
           <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">Core Training Tracks & Vocational Pathways</h2>
@@ -63,8 +78,8 @@
           </div>
 
           <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-            <h3 style="color: #a3e635; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Aerial Drone Mapping & GIS</h3>
-            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Commercial thermal and RGB aerial mapping training, flight telemetry logging, offline GIS data collection, and burn-scar ecological evaluation.</p>
+            <h3 style="color: #a3e635; font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem;">Aerial Drone Mapping &amp; FAA Licensing</h3>
+            <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin: 0;">Commercial thermal and RGB aerial mapping training alongside structured ground-school preparation for official <strong>FAA Part 107 Remote Pilot licensing</strong>, flight telemetry logging, and burn-scar ecological evaluation.</p>
           </div>
 
           <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
@@ -86,6 +101,7 @@
         </div>
       </section>
 
+      <!-- PARTNERSHIPS & GOVERNANCE SECTION -->
       <section id="partners" style="background: #1e293b; padding: 4rem 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
         <div style="text-align: center; margin-bottom: 3.5rem;">
           <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">Partnerships, Research & Governance</h2>
@@ -111,6 +127,7 @@
         </div>
       </section>
 
+      <!-- RECENT NEWS & FIELD DISPATCHES SECTION -->
       <section id="news" style="margin-bottom: 3rem;">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
           <div>
@@ -142,6 +159,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer style="background: #144d29; padding: 2.5rem 2rem; text-align: center; color: #cbd5e1; font-size: 0.95rem; margin-top: 5rem; border-top: 1px solid rgba(255,255,255,0.1);">
     <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Cascadia Forestry Solutions LLC. All rights reserved.</p>
   </footer>
