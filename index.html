@@ -19,7 +19,37 @@
       <li><a href="support.html" style="background: #27ae60; color: white; padding: 0.6rem 1.25rem; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.95rem;">How You Can Help</a></li>
     </ul>
   </nav>
+<!-- Public Homepage Updates Section -->
+    <section style="max-width: 900px; margin: 4rem auto; padding: 0 2rem;">
+      <h3 style="color: #0f172a; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem; text-align: center;">Operational Dispatches</h3>
+      <div id="publicUpdatesFeed" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Dynamic updates injected from staff command -->
+      </div>
+    </section>
 
+    <!-- Public Feed Script -->
+    <script>
+      function renderPublicUpdates() {
+        let container = document.getElementById("publicUpdatesFeed");
+        let stored = localStorage.getItem("vrp_updates");
+        let updates = stored ? JSON.parse(stored) : [
+          { date: "Sept 2026", title: "Santiam Corridor Phase II Initiated", desc: "Cohort teams deployed for heavy fuel mitigation and crosscut safety lines." }
+        ];
+
+        container.innerHTML = "";
+        updates.forEach(item => {
+          let card = document.createElement("div");
+          card.style.cssText = "background: #1e293b; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2);";
+          card.innerHTML = `
+            <span style="color: #a3e635; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">${item.date}</span>
+            <h4 style="color: #ffffff; font-size: 1.2rem; margin: 0.4rem 0 0.5rem 0;">${item.title}</h4>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">${item.desc}</p>
+          `;
+          container.appendChild(card);
+        });
+      }
+      window.addEventListener('load', renderPublicUpdates);
+    </script>
   <!-- Hero Section with Corrected Screenshot Filename -->
   <header style="position: relative; min-height: 85vh; background: url('Screenshot_20260421-000340.png') center/cover no-repeat; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 3rem 2rem; text-align: center;">
     
