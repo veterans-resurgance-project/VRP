@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Inventory Log - Veterans Resurgence Project</title>
+</head>
+<body style="background-color: #0f172a; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+
+  <!-- Navigation Bar -->
+  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
+    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP STAFF PORTAL</div>
+    <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center;">
+      <li><a href="framework.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">&larr; Back to Framework</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem;">
+    
+    <div style="border-bottom: 2px solid #334155; padding-bottom: 1.5rem; margin-bottom: 2.5rem;">
+      <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Restricted Access</span>
+      <h1 style="font-size: 2.5rem; font-weight: 900; color: #ffffff; margin: 0 0 0.5rem 0;">Inventory Control Ledger</h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Log equipment, field gear, and timber tools. Entries persist securely on this device.</p>
+    </div>
+
+    <!-- Add Item Form Section -->
+    <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+      <h2 style="color: #a3e635; font-size: 1.3rem; margin-top: 0; margin-bottom: 1.25rem;">Add New Inventory Item</h2>
+      
+      <form id="inventoryForm" onsubmit="addItem(event)" style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 1rem; align-items: end;">
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; font-weight: 600;">Item Description / Tool Name</label>
+          <input type="text" id="itemName" required placeholder="e.g., Stihl Chainsaw MS 261" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 0.95rem; box-sizing: border-box;">
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; font-weight: 600;">Quantity</label>
+          <input type="number" id="itemQty" required min="1" value="1" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 0.95rem; box-sizing: border-box;">
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; font-weight: 600;">Category</label>
+          <select id="itemCat" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 0.95rem; box-sizing: border-box;">
+            <option value="Field Gear">Field Gear</option>
+            <option value="Safety Equipment">Safety Equipment</option>
+            <option value="Power Tools">Power Tools</option>
+            <option value="UAV / Tech">UAV / Tech</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" style="background: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; height: 43px; white-space: nowrap;">Add Item</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Inventory Display Table -->
+    <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 style="color: #ffffff; font-size: 1.3rem; margin: 0;">Active Inventory Records</h2>
+        <button onclick="clearAllInventory()" style="background: transparent; color: #f87171; border: 1px solid rgba(248,113,113,0.4); padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;">Clear All Data</button>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 2px solid #334155; color: #94a3b8; font-size: 0.9rem;">
+              <th style="padding: 0.75rem;">Item Description</th>
+              <th style="padding: 0.75rem;">Category</th>
+              <th style="padding: 0.75rem; text-align: center;">Qty</th>
+              <th style="padding: 0.75rem; text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTableBody">
+            <!-- Dynamic rows injected here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JavaScript Logic for Local Storage & Management -->
+  <script>
+    // Initial sample default items if storage is completely empty
+    const defaultItems = [
+      { name: "Husqvarna Chainsaw 450 Rancher", category: "Power Tools", qty: 2 },
+      { name: "Class III High-Vis Safety Vests", category: "Safety Equipment", qty: 15 },
+      { name: "DJI Mavic 3 Enterprise Drone", category: "UAV / Tech", qty: 1 }
+    ];
+
+    function getInventory() {
+      let stored = localStorage.getItem("vrp_inventory");
+      if (!stored) {
+        return defaultItems;
+      }
+      return JSON.parse(stored);
+    }
+
+    function saveInventory(items) {
+      localStorage.setItem("vrp_inventory", JSON.stringify(items));
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById("inventoryTableBody");
+      const items = getInventory();
+      
+      tbody.innerHTML = "";
+
+      if (items.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: #64748b;">No inventory records found. Add an item above.</td></tr>`;
+        return;
+      }
+
+      items.forEach((item, index) => {
+        let row = document.createElement("tr");
+        row.style.borderBottom = "1px solid #334155";
+        row.innerHTML = `
+          <td style="padding: 1rem; color: #f8fafc; font-weight: 500;">${item.name}</td>
+          <td style="padding: 1rem; color: #cbd5e1; font-size: 0.95rem;">${item.category}</td>
+          <td style="padding: 1rem; text-align: center; color: #a3e635; font-weight: 700;">${item.qty}</td>
+          <td style="padding: 1rem; text-align: right;">
+            <button onclick="removeItem(${index})" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem;">Remove</button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function addItem(event) {
+      event.preventDefault();
+      const name = document.getElementById("itemName").value.trim();
+      const qty = parseInt(document.getElementById("itemQty").value);
+      const category = document.getElementById("itemCat").value;
+
+      if (!name) return;
+
+      let items = getInventory();
+      items.push({ name, category, qty });
+      saveInventory(items);
+
+      document.getElementById("inventoryForm").reset();
+      document.getElementById("itemQty").value = "1";
+      renderTable();
+    }
+
+    function removeItem(index) {
+      let items = getInventory();
+      items.splice(index, 1);
+      saveInventory(items);
+      renderTable();
+    }
+
+    function clearAllInventory() {
+      if (confirm("Are you sure you want to clear all inventory records?")) {
+        localStorage.removeItem("vrp_inventory");
+        renderTable();
+      }
+    }
+
+    // Load table on page start
+    window.onload = renderTable;
+  </script>
+
+</body>
+</html>
