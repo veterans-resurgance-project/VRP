@@ -10,7 +10,7 @@
   <header style="text-align: center; padding: 3rem 1rem 1rem 1rem; border-bottom: 1px solid #334155;">
     <span style="background: rgba(39,174,96,0.15); color: #27ae60; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 0.75rem;">Final Action Gateway</span>
     <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #ffffff;">Secure Your Commitment</h1>
-    <p style="font-size: 1.1rem; color: #94a3b8; margin: 0; max-width: 600px; margin-left: auto; margin-right: auto;">Choose your avenue of support, submit your details, and lock in your active role within our Linn County watershed restoration network.</p>
+    <p style="font-size: 1.1rem; color: #94a3b8; margin: 0; max-width: 600px; margin-left: auto; margin-right: auto;">Submit your details, lock in your active role, and stand with our Linn County watershed restoration network.</p>
   </header>
 
   <!-- Main Signup & Selection Container -->
@@ -50,10 +50,16 @@
       </form>
 
       <!-- Success Notification Confirmation Box -->
-      <div id="successBox" style="display: none; margin-top: 1.5rem; background: rgba(39,174,96,0.15); border: 1px solid #27ae60; padding: 1rem; border-radius: 8px; text-align: center;">
-        <p style="color: #a3e635; font-weight: 700; margin: 0 0 0.5rem 0;">Commitment Logged Successfully!</p>
-        <p style="color: #cbd5e1; font-size: 0.9rem; margin: 0 0 1rem 0;">Your information has been queued for staff review. Thank you for standing with the Watership Stewards.</p>
-        <a href="index.html" style="background: #27ae60; color: white; padding: 0.5rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-block;">Return to Home Page &rarr;</a>
+      <div id="successBox" style="display: none; text-align: center; padding: 1rem 0;">
+        <span style="background: rgba(163,230,53,0.15); color: #a3e635; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.9rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Mission Impact Confirmed</span>
+        <h2 style="color: #ffffff; font-size: 2rem; font-weight: 900; margin-top: 0; margin-bottom: 0.75rem;">Thank You! We Love You! 🎉</h2>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; max-width: 550px; margin-left: auto; margin-right: auto;">
+          We will proudly add you to our esteemed list of advisers, partners, donors, and volunteers! <span style="font-size: 0.9rem; color: #94a3b8; display: block; margin-top: 0.5rem; font-style: italic;">(Note: Recognition feature on our honor roll activates upon donation fulfillment.)</span>
+        </p>
+        
+        <a href="index.html" style="background: #27ae60; color: white; padding: 1rem 2.5rem; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.1rem; display: inline-block; box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);">
+          Return to Home Page &rarr;
+        </a>
       </div>
 
     </div>
@@ -87,7 +93,7 @@
       existingIntake.unshift(commitmentData);
       localStorage.setItem("vrp_intake_queue", JSON.stringify(existingIntake));
 
-      // Hide form, show success state with return home button
+      // Hide form, show celebration success state
       event.target.style.display = "none";
       document.getElementById("successBox").style.display = "block";
     }
