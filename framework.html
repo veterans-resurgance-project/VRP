@@ -79,17 +79,33 @@
       </p>
     </section>
 
-    <!-- Call to Action / Escape Button -->
-    <div style="background: #144d29; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+<div style="background: #144d29; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
       <h2 style="color: #ffffff; font-size: 1.6rem; font-weight: 800; margin-top: 0; margin-bottom: 0.75rem;">Support the Mission</h2>
       <p style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin: 0 auto 1.5rem auto;">
         Discover how you can partner with us, support veteran employment, or contribute to regional watershed restoration.
       </p>
-      <a href="support.html" style="background: #27ae60; color: white; padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2);">
-        How You Can Help &rarr;
-      </a>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+        <a href="support.html" style="background: #27ae60; color: white; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2);">
+          How You Can Help &rarr;
+        </a>
+        
+        <button onclick="checkStaffAccess()" style="background: rgba(15, 23, 42, 0.6); color: #cbd5e1; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+          Staff Inventory Login
+        </button>
+      </div>
     </div>
 
+    <script>
+      function checkStaffAccess() {
+        let passcode = prompt("Enter Staff Security Code:");
+        if (passcode === "VRP2026") {
+          window.location.href = "inventory-log.html"; 
+        } else if (passcode !== null) {
+          alert("Incorrect security code. Access denied.");
+        }
+      }
+    </script>
   </main>
 
   <!-- Footer -->
