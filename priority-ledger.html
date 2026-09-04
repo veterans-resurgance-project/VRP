@@ -49,7 +49,48 @@
         <button type="submit" style="background: #27ae60; color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Add to Ledger</button>
       </form>
     </div>
+<!-- Staff Goal Management Card -->
+<div style="background: #1e293b; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; margin-bottom: 2rem;">
+  <h3 style="color: #ffffff; font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Update Public Expansion Goal Tracker</h3>
+  <form onsubmit="updatePublicGoal(event)">
+    <div style="margin-bottom: 1rem;">
+      <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Goal Title</label>
+      <input type="text" id="adminGoalTitle" required value="Santiam Phase II Tool Cache Completion" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white;">
+    </div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+      <div>
+        <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Progress Percentage (0-100)</label>
+        <input type="number" id="adminGoalPercent" min="0" max="100" required value="85" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white;">
+      </div>
+      <div>
+        <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Status Text / Remaining Need</label>
+        <input type="text" id="adminGoalStatus" required value="Only $450 needed to cross the finish line!" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white;">
+      </div>
+    </div>
 
+    <div style="margin-bottom: 1rem;">
+      <label style="display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem;">Description</label>
+      <textarea id="adminGoalDesc" required rows="2" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: white; resize: vertical;">Help us secure the final specialized rigging gear to get our next veteran cohort fully equipped in the field.</textarea>
+    </div>
+
+    <button type="submit" style="background: #27ae60; color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Update Live Goal Bar</button>
+  </form>
+</div>
+
+<script>
+  function updatePublicGoal(event) {
+    event.preventDefault();
+    let goalData = {
+      title: document.getElementById("adminGoalTitle").value.trim(),
+      percentage: document.getElementById("adminGoalPercent").value,
+      statusText: document.getElementById("adminGoalStatus").value.trim(),
+      desc: document.getElementById("adminGoalDesc").value.trim()
+    };
+    localStorage.setItem("vrp_goal", JSON.stringify(goalData));
+    alert("Public expansion goal successfully updated!");
+  }
+</script>
     <!-- Active Priorities List -->
     <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 1rem;">Active Operational Priorities</h3>
     <div id="priorityContainer" style="display: flex; flex-direction: column; gap: 1rem;">
