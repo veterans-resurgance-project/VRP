@@ -2,314 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Staff Command Portal - Veterans Resurgence Project</title>
+  <title>Command Staff Portal | VRP Watership Stewards</title>
 </head>
-<body style="background-color: #0f172a; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
-<!-- Secure Passcode Gate Overlay -->
-  <div id="passcodeModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0f172a; display: flex; justify-content: center; align-items: center; z-index: 9999;">
-    <div style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); width: 100%; max-width: 400px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-      <span style="background: rgba(163,230,53,0.15); color: #a3e635; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Restricted Access</span>
-      <h2 style="color: #ffffff; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 0.5rem;">Staff Command Portal</h2>
-      <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">Enter authorization passcode to proceed.</p>
+<body style="background: #0f172a; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;">
+
+  <!-- Passcode Gateway Modal Overlay -->
+  <div id="authModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.95); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+    <div style="background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+      <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Restricted Access</span>
+      <h2 style="color: #ffffff; font-size: 1.5rem; margin-top: 0; margin-bottom: 0.5rem;">Enter Staff Passcode</h2>
+      <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">Enter your 4-digit security code to access incoming intakes and management queues.</p>
       
-      <form onsubmit="verifyPasscode(event)">
-        <input type="password" id="passcodeInput" placeholder="Enter Passcode" autofocus style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1.1rem; text-align: center; letter-spacing: 0.2em; margin-bottom: 1rem; box-sizing: border-box;">
-        <button type="submit" style="width: 100%; background: #27ae60; color: white; padding: 0.75rem; border-radius: 8px; border: none; font-weight: 700; font-size: 1rem; cursor: pointer;">Authorize Access</button>
+      <form onsubmit="verifyStaffPasscode(event)">
+        <input type="password" id="passcodeInput" maxlength="4" placeholder="••••" autocomplete="current-password" required style="width: 100%; padding: 0.75rem; text-align: center; font-size: 1.5rem; letter-spacing: 0.5em; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; box-sizing: border-box; margin-bottom: 1.25rem;">
+        <button type="submit" style="width: 100%; background: #2563eb; color: white; padding: 0.75rem; border-radius: 8px; border: none; font-weight: 700; font-size: 1rem; cursor: pointer;">Authenticate &rarr;</button>
       </form>
-      <div id="passcodeError" style="color: #f87171; font-size: 0.85rem; margin-top: 1rem; display: none;">Incorrect passcode. Authorization denied.</div>
+      
+      <div id="authError" style="color: #ef4444; font-size: 0.85rem; margin-top: 1rem; display: none;">Incorrect passcode. Access denied.</div>
+      
+      <div style="margin-top: 2rem; border-top: 1px solid #334155; padding-top: 1rem;">
+        <a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.85rem;">&larr; Return to Public Home</a>
+      </div>
     </div>
   </div>
-  <!-- Navigation Bar -->
-  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
-    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP STAFF COMMAND</div>
-    <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center;">
-      <li><a href="framework.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">&larr; Exit to Public Site</a></li>
-    </ul>
-  </nav>
-<!-- JavaScript Engine for LocalStorage Management -->
-  <script>
-    // --- PASSCODE GATE LOGIC ---
-    function verifyPasscode(event) {
-      event.preventDefault();
-      const enteredCode = document.getElementById("passcodeInput").value.trim();
-      const modal = document.getElementById("passcodeModal");
-      const errorText = document.getElementById("passcodeError");
 
-      if (enteredCode === "6060") {
-        modal.style.display = "none"; // Hide gate, reveal dashboard
+  <!-- Main Staff Dashboard (Hidden until unlocked) -->
+  <div id="staffDashboard" style="display: none; max-width: 900px; margin: 3rem auto; padding: 0 2rem;">
+    
+    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 1.5rem; margin-bottom: 2rem;">
+      <div>
+        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">Command Verified</span>
+        <h1 style="font-size: 2rem; margin: 0; color: #ffffff;">Staff Intake Queue</h1>
+      </div>
+      <div>
+        <button onclick="clearIntakeQueue()" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; cursor: pointer; margin-right: 0.75rem;">Clear Queue</button>
+        <a href="index.html" style="background: #334155; color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem;">Exit Portal</a>
+      </div>
+    </header>
+
+    <!-- Queue List Container -->
+    <main>
+      <div id="queueContainer">
+        <!-- Dynamically injected intake submissions appear here -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Staff Portal Logic -->
+  <script>
+    function verifyStaffPasscode(event) {
+      event.preventDefault();
+      const code = document.getElementById("passcodeInput").value.trim();
+      
+      if (code === "6060") {
+        // Hide modal, show dashboard
+        document.getElementById("authModal").style.display = "none";
+        document.getElementById("staffDashboard").style.display = "block";
+        loadIntakeQueue();
       } else {
-        errorText.style.display = "block";
+        document.getElementById("authError").style.display = "block";
         document.getElementById("passcodeInput").value = "";
       }
     }
 
-    // --- INTAKE LOGIC ---
-    function getIntake() {
-      // (rest of your intake functions...)
-    }
-
-    // ... (all your other inventory and update functions follow)
-  </script>
-  <!-- Main Container -->
-  <main style="max-width: 1000px; margin: 0 auto; padding: 3rem 2rem;">
-    
-    <div style="border-bottom: 2px solid #334155; padding-bottom: 1.5rem; margin-bottom: 2.5rem;">
-      <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Restricted Access (6060 Verified)</span>
-      <h1 style="font-size: 2.5rem; font-weight: 900; color: #ffffff; margin: 0 0 0.5rem 0;">Operational Dashboard</h1>
-      <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Manage equipment ledgers, track incoming property bids, and triage community waitlists.</p>
-    </div>
-
-    <!-- SECTION 1: Action Intake & Inquiries Sorting Center -->
-    <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <div>
-          <h2 style="color: #ffffff; font-size: 1.4rem; margin: 0 0 0.3rem 0;">Action Intake &amp; Inquiries</h2>
-          <p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">Incoming public bids, waiting list requests, and partner submissions.</p>
-        </div>
-        <button onclick="clearAllIntake()" style="background: transparent; color: #f87171; border: 1px solid rgba(248,113,113,0.4); padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;">Clear Intake Log</button>
-      </div>
-
-      <!-- Add Inquiry Form -->
-      <form id="intakeForm" onsubmit="addInquiry(event)" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr auto; gap: 1rem; align-items: end; margin-bottom: 2rem; background: #0f172a; padding: 1.5rem; border-radius: 12px; border: 1px solid #334155;">
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 600;">Contact Name / Property Note</label>
-          <input type="text" id="inquiryName" required placeholder="e.g., Miller Property - Scio" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 600;">Request Type</label>
-          <select id="inquiryType" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-            <option value="Property Bid / Mitigation">Property Bid / Mitigation</option>
-            <option value="Volunteer Waitlist">Volunteer Waitlist</option>
-            <option value="General Partner Inquiry">General Partner Inquiry</option>
-          </select>
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 600;">Status</label>
-          <select id="inquiryStatus" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-            <option value="Action Required">Action Required</option>
-            <option value="Scheduled">Scheduled</option>
-            <option value="Completed">Completed</option>
-          </select>
-        </div>
-        <div>
-          <button type="submit" style="background: #27ae60; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; border: none; font-weight: 700; cursor: pointer; height: 38px; white-space: nowrap;">Log Entry</button>
-        </div>
-      </form>
-
-      <!-- Intake Table -->
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; text-align: left;">
-          <thead>
-            <tr style="border-bottom: 2px solid #334155; color: #94a3b8; font-size: 0.85rem;">
-              <th style="padding: 0.6rem;">Contact / Detail</th>
-              <th style="padding: 0.6rem;">Type</th>
-              <th style="padding: 0.6rem;">Status</th>
-              <th style="padding: 0.6rem; text-align: right;">Action</th>
-            </tr>
-          </thead>
-          <tbody id="intakeTableBody"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SECTION 2: Inventory Management Ledger -->
-    <section style="background: #1e293b; padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <div>
-          <h2 style="color: #ffffff; font-size: 1.4rem; margin: 0 0 0.3rem 0;">Equipment &amp; Inventory Ledger</h2>
-          <p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">Log field gear, power tools, and safety equipment counts.</p>
-        </div>
-        <button onclick="clearAllInventory()" style="background: transparent; color: #f87171; border: 1px solid rgba(248,113,113,0.4); padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;">Clear Inventory</button>
-      </div>
-
-      <!-- Add Item Form -->
-      <form id="inventoryForm" onsubmit="addInventoryItem(event)" style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 1rem; align-items: end; margin-bottom: 2rem; background: #0f172a; padding: 1.5rem; border-radius: 12px; border: 1px solid #334155;">
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 600;">Item Description / Tool Name</label>
-          <input type="text" id="itemName" required placeholder="e.g., Stihl Chainsaw MS 261" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottuom: 0.3rem; font-weight: 600;">Quantity</label>
-          <input type="number" id="itemQty" required min="1" value="1" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-        </div>
-        <div>
-          <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 600;">Category</label>
-          <select id="itemCat" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: white; font-size: 0.9rem; box-sizing: border-box;">
-            <option value="Field Gear">Field Gear</option>
-            <option value="Safety Equipment">Safety Equipment</option>
-            <option value="Power Tools">Power Tools</option>
-            <option value="UAV / Tech">UAV / Tech</option>
-          </select>
-        </div>
-        <div>
-          <button type="submit" style="background: #27ae60; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; border: none; font-weight: 700; cursor: pointer; height: 38px; white-space: nowrap;">Add Item</button>
-        </div>
-      </form>
-
-      <!-- Inventory Table -->
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; text-align: left;">
-          <thead>
-            <tr style="border-bottom: 2px solid #334155; color: #94a3b8; font-size: 0.85rem;">
-              <th style="padding: 0.6rem;">Item Description</th>
-              <th style="padding: 0.6rem;">Category</th>
-              <th style="padding: 0.6rem; text-align: center;">Qty</th>
-              <th style="padding: 0.6rem; text-align: right;">Action</th>
-            </tr>
-          </thead>
-          <tbody id="inventoryTableBody"></tbody>
-        </table>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- JavaScript Engine for LocalStorage Management -->
-  <script>
-    // --- INTAKE LOGIC ---
-    function getIntake() {
-      let stored = localStorage.getItem("vrp_intake");
-      return stored ? JSON.parse(stored) : [
-        { name: "Greenwood Family - Lebanon Property Bid", type: "Property Bid / Mitigation", status: "Action Required" }
-      ];
-    }
-
-    function saveIntake(items) {
-      localStorage.setItem("vrp_intake", JSON.stringify(items));
-    }
-
-    function renderIntake() {
-      const tbody = document.getElementById("intakeTableBody");
-      const items = getIntake();
-      tbody.innerHTML = "";
-
-      if (items.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 1.5rem; color: #64748b;">No active inquiries logged.</td></tr>`;
+    function loadIntakeQueue() {
+      const container = document.getElementById("queueContainer");
+      const queue = JSON.parse(localStorage.getItem("vrp_intake_queue") || "[]");
+      
+      if (queue.length === 0) {
+        container.innerHTML = `
+          <div style="background: #1e293b; border-radius: 12px; padding: 3rem; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">No active submissions in the intake queue right now.</p>
+          </div>
+        `;
         return;
       }
 
-      items.forEach((item, index) => {
-        let row = document.createElement("tr");
-        row.style.borderBottom = "1px solid #334155";
-        let statusColor = item.status === "Action Required" ? "#f87171" : (item.status === "Scheduled" ? "#fbd38d" : "#a3e635");
-        
-        row.innerHTML = `
-          <td style="padding: 0.8rem; color: #f8fafc; font-weight: 500;">${item.name}</td>
-          <td style="padding: 0.8rem; color: #cbd5e1; font-size: 0.9rem;">${item.type}</td>
-          <td style="padding: 0.8rem; color: ${statusColor}; font-weight: 600; font-size: 0.9rem;">${item.status}</td>
-          <td style="padding: 0.8rem; text-align: right;">
-            <button onclick="removeIntake(${index})" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.6rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Remove</button>
-          </td>
+      let html = '';
+      queue.forEach((item, index) => {
+        html += `
+          <div style="background: #1e293b; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 12px;">${escapeHtml(item.track)}</span>
+              <span style="color: #64748b; font-size: 0.85rem;">${escapeHtml(item.timestamp)}</span>
+            </div>
+            <h3 style="color: #ffffff; font-size: 1.2rem; margin: 0 0 0.5rem 0;">${escapeHtml(item.name)}</h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0;"><strong>Contact:</strong> ${escapeHtml(item.contact)}</p>
+          </div>
         `;
-        tbody.appendChild(row);
       });
+      container.innerHTML = html;
     }
 
-    function addInquiry(event) {
-      event.preventDefault();
-      const name = document.getElementById("inquiryName").value.trim();
-      const type = document.getElementById("inquiryType").value;
-      const status = document.getElementById("inquiryStatus").value;
-
-      if (!name) return;
-
-      let items = getIntake();
-      items.push({ name, type, status });
-      saveIntake(items);
-
-      document.getElementById("intakeForm").reset();
-      renderIntake();
-    }
-
-    function removeIntake(index) {
-      let items = getIntake();
-      items.splice(index, 1);
-      saveIntake(items);
-      renderIntake();
-    }
-
-    function clearAllIntake() {
-      if (confirm("Clear all intake records?")) {
-        localStorage.removeItem("vrp_intake");
-        renderIntake();
+    function clearIntakeQueue() {
+      if (confirm("Are you sure you want to clear all stored intake records?")) {
+        localStorage.removeItem("vrp_intake_queue");
+        loadIntakeQueue();
       }
     }
 
-    // --- INVENTORY LOGIC ---
-    function getInventory() {
-      let stored = localStorage.getItem("vrp_inventory");
-      return stored ? JSON.parse(stored) : [
-        { name: "Husqvarna Chainsaw 450 Rancher", category: "Power Tools", qty: 2 },
-        { name: "Class III High-Vis Safety Vests", category: "Safety Equipment", qty: 15 }
-      ];
+    function escapeHtml(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     }
-
-    function saveInventory(items) {
-      localStorage.setItem("vrp_inventory", JSON.stringify(items));
-    }
-
-    function renderInventory() {
-      const tbody = document.getElementById("inventoryTableBody");
-      const items = getInventory();
-      tbody.innerHTML = "";
-
-      if (items.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 1.5rem; color: #64748b;">No inventory records found.</td></tr>`;
-        return;
-      }
-
-      items.forEach((item, index) => {
-        let row = document.createElement("tr");
-        row.style.borderBottom = "1px solid #334155";
-        row.innerHTML = `
-          <td style="padding: 0.8rem; color: #f8fafc; font-weight: 500;">${item.name}</td>
-          <td style="padding: 0.8rem; color: #cbd5e1; font-size: 0.9rem;">${item.category}</td>
-          <td style="padding: 0.8rem; text-align: center; color: #a3e635; font-weight: 700;">${item.qty}</td>
-          <td style="padding: 0.8rem; text-align: right;">
-            <button onclick="removeInventory(${index})" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.6rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Remove</button>
-          </td>
-        `;
-        tbody.appendChild(row);
-      });
-    }
-
-    function addInventoryItem(event) {
-      event.preventDefault();
-      const name = document.getElementById("itemName").value.trim();
-      const qty = parseInt(document.getElementById("itemQty").value);
-      const category = document.getElementById("itemCat").value;
-
-      if (!name) return;
-
-      let items = getInventory();
-      items.push({ name, category, qty });
-      saveInventory(items);
-
-      document.getElementById("inventoryForm").reset();
-      document.getElementById("itemQty").value = "1";
-      renderInventory();
-    }
-
-    function removeInventory(index) {
-      let items = getInventory();
-      items.splice(index, 1);
-      saveInventory(items);
-      renderInventory();
-    }
-
-    function clearAllInventory() {
-      if (confirm("Clear all inventory records?")) {
-        localStorage.removeItem("vrp_inventory");
-        renderInventory();
-      }
-    }
-
-    // Initialize both tables on page load
-    window.onload = function() {
-      renderIntake();
-      renderInventory();
-    };
   </script>
 
 </body>
