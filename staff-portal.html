@@ -81,6 +81,26 @@
     alert("Dispatch successfully published to public feed!");
     event.target.reset();
   }
+  <!-- Executive & Financial Vault Gateway -->
+<div style="background: #1e293b; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.3); padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">Restricted Executive Tier</span>
+  <h3 style="color: #ffffff; font-size: 1.2rem; margin: 0 0 0.5rem 0;">Financial Ledgers &amp; Division Archives</h3>
+  <p style="color: #94a3b8; font-size: 0.9rem; margin: 0 0 1rem 0;">Access high-level paperwork, medical tracking protocols, and fiscal logs. Requires secondary executive authorization.</p>
+  <button onclick="verifyExecutiveAccess()" style="background: #ef4444; color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+    Access Executive Vault &rarr;
+  </button>
+</div>
+
+<script>
+  function verifyExecutiveAccess() {
+    let execCode = prompt("Enter Executive Security Code:");
+    if (execCode === "8080") { // Set your separate executive passcode here
+      window.location.href = "executive-vault.html";
+    } else if (execCode !== null) {
+      alert("Unauthorized. Executive clearance required.");
+    }
+  }
+</script>
       </script>
     <!-- Queue List Container -->
     <main>
