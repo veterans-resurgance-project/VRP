@@ -15,7 +15,7 @@
       <li><a href="agreements.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Agreements &amp; Docs</a></li>
       <li><a href="training-details.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Training &amp; Ledger</a></li>
       <li><a href="gallery.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Gallery</a></li>
-    <li><a href="community.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Community &amp; News</a></li>
+      <li><a href="community.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Community &amp; News</a></li>
     </ul>
   </nav>
 
@@ -111,6 +111,96 @@
       </p>
     </section>
 
+    <!-- Expanded Commercial & Landowner Intake Form Section -->
+    <section id="intake" style="background: #1e293b; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+      <span style="background: rgba(99,179,237,0.15); color: #63b3ed; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Direct Contract &amp; Landowner Intake</span>
+      
+      <h2 style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 0.5rem;">Request for Service &amp; Consultation</h2>
+      <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem;">Provide your details below to be added to our priority callback and project assessment list.</p>
+      
+      <form id="cascadia-bid-form" style="display: grid; gap: 1.25rem; font-size: 0.9rem; color: #cbd5e1;">
+        
+        <!-- Contact Info Row -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Full Name / Entity:</label>
+            <input type="text" id="bid-client" placeholder="Your Name or Organization" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+          </div>
+          <div>
+            <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Phone Number:</label>
+            <input type="tel" id="bid-phone" placeholder="(541) 000-0000" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+          </div>
+        </div>
+
+        <div>
+          <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Email Address:</label>
+          <input type="email" id="bid-email" placeholder="name@example.com" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+        </div>
+
+        <!-- Location & Scope Row -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Property Location / County:</label>
+            <input type="text" id="bid-location" placeholder="e.g., Linn County, OR" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+          </div>
+          <div>
+            <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Estimated Acreage / Scale:</label>
+            <input type="text" id="bid-scope" placeholder="e.g., 10 Acres / Residential WUI" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+          </div>
+        </div>
+
+        <div>
+          <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Primary Service Required:</label>
+          <select id="bid-service" style="width: 100%; padding: 0.75rem; border-radius: 6px; background: #0f172a; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+            <option value="Fuels Reduction">Multi-Acre Hazardous Fuels Reduction</option>
+            <option value="Timber Support">Commercial Timber Support / Felling</option>
+            <option value="Hillslope Stabilization">Hillslope Stabilization &amp; Terracing</option>
+            <option value="Native Plants / Nursery">Native Plant Stock / Nursery Inquiry</option>
+            <option value="General Consultation">General Forestry Consultation</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Additional Project Details / Best Time to Call:</label>
+          <textarea id="bid-notes" rows="3" placeholder="Tell us about slope accessibility, timing, or specific restoration goals..." style="width: 100%; padding: 0.75rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: inherit;"></textarea>
+        </div>
+
+        <div>
+          <button type="submit" style="background: #a3e635; color: #0f172a; padding: 0.85rem 2rem; border-radius: 8px; border: none; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            Submit Request &amp; Join Callback List &rarr;
+          </button>
+          <span id="bid-success-msg" style="color: #a3e635; margin-left: 1rem; font-weight: 700; display: none;">✓ Request Logged Successfully!</span>
+        </div>
+      </form>
+    </section>
+
+    <!-- JavaScript to handle intake form storage -->
+    <script>
+      document.getElementById('cascadia-bid-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const newEntry = {
+          id: Date.now(),
+          client: document.getElementById('bid-client').value,
+          phone: document.getElementById('bid-phone').value,
+          email: document.getElementById('bid-email').value,
+          location: document.getElementById('bid-location').value,
+          scope: document.getElementById('bid-scope').value,
+          service: document.getElementById('bid-service').value,
+          notes: document.getElementById('bid-notes').value,
+          date: new Date().toLocaleDateString()
+        };
+
+        let existingEntries = JSON.parse(localStorage.getItem('cascadia_bids')) || [];
+        existingEntries.push(newEntry);
+        localStorage.setItem('cascadia_bids', JSON.stringify(existingEntries));
+
+        document.getElementById('bid-success-msg').style.display = 'inline';
+        this.reset();
+        setTimeout(() => { document.getElementById('bid-success-msg').style.display = 'none'; }, 3500);
+      });
+    </script>
+
     <section style="background: #144d29; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2); text-align: center;">
       <h2 style="color: #ffffff; font-size: 1.6rem; font-weight: 800; margin-top: 0; margin-bottom: 0.75rem;">Discover More &amp; Get Involved</h2>
       <p style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto 1.5rem auto;">
@@ -123,42 +213,44 @@
     </section>
 
   </main>
-<!-- Public Goal Tracker Section -->
-<section style="max-width: 900px; margin: 4rem auto; padding: 0 2rem;">
-  <div style="background: linear-gradient(135deg, #144d29 0%, #1e293b 100%); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(163,230,53,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center;">
-    <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Mission Expansion Goal</span>
-    
-    <h3 id="goalTitle" style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin: 0 0 0.5rem 0;">Santiam Phase II Tool Cache Completion</h3>
-    <p id="goalDesc" style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.5; max-width: 650px; margin: 0 auto 1.5rem auto;">
-      Help us secure the final specialized rigging gear to get our next veteran cohort fully equipped in the field.
-    </p>
 
-    <!-- Visual Progress Bar -->
-    <div style="background: rgba(15, 23, 42, 0.6); border-radius: 10px; height: 24px; padding: 3px; max-width: 600px; margin: 0 auto 1rem auto; border: 1px solid rgba(255,255,255,0.1);">
-      <div id="goalProgressBar" style="background: #27ae60; height: 100%; border-radius: 8px; width: 85%; transition: width 0.5s ease;"></div>
+  <!-- Public Goal Tracker Section -->
+  <section style="max-width: 900px; margin: 4rem auto; padding: 0 2rem;">
+    <div style="background: linear-gradient(135deg, #144d29 0%, #1e293b 100%); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(163,230,53,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center;">
+      <span style="background: #a3e635; color: #0f172a; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.4rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Mission Expansion Goal</span>
+      
+      <h3 id="goalTitle" style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin: 0 0 0.5rem 0;">Santiam Phase II Tool Cache Completion</h3>
+      <p id="goalDesc" style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.5; max-width: 650px; margin: 0 auto 1.5rem auto;">
+        Help us secure the final specialized rigging gear to get our next veteran cohort fully equipped in the field.
+      </p>
+
+      <!-- Visual Progress Bar -->
+      <div style="background: rgba(15, 23, 42, 0.6); border-radius: 10px; height: 24px; padding: 3px; max-width: 600px; margin: 0 auto 1rem auto; border: 1px solid rgba(255,255,255,0.1);">
+        <div id="goalProgressBar" style="background: #27ae60; height: 100%; border-radius: 8px; width: 85%; transition: width 0.5s ease;"></div>
+      </div>
+      
+      <p id="goalStats" style="color: #a3e635; font-size: 0.95rem; font-weight: 700; margin: 0 0 1.5rem 0;">85% Funded — Only $450 needed to cross the finish line!</p>
+
+      <a href="support.html" style="background: #a3e635; color: #0f172a; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        Take This Over the Finish Line &rarr;
+      </a>
     </div>
-    
-    <p id="goalStats" style="color: #a3e635; font-size: 0.95rem; font-weight: 700; margin: 0 0 1.5rem 0;">85% Funded — Only $450 needed to cross the finish line!</p>
+  </section>
 
-    <a href="support.html" style="background: #a3e635; color: #0f172a; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-      Take This Over the Finish Line &rarr;
-    </a>
-  </div>
-</section>
-
-<script>
-  function renderPublicGoal() {
-    let stored = localStorage.getItem("vrp_goal");
-    if (stored) {
-      let goal = JSON.parse(stored);
-      document.getElementById("goalTitle").innerText = goal.title;
-      document.getElementById("goalDesc").innerText = goal.desc;
-      document.getElementById("goalProgressBar").style.width = goal.percentage + "%";
-      document.getElementById("goalStats").innerText = `${goal.percentage}% Funded — ${goal.statusText}`;
+  <script>
+    function renderPublicGoal() {
+      let stored = localStorage.getItem("vrp_goal");
+      if (stored) {
+        let goal = JSON.parse(stored);
+        document.getElementById("goalTitle").innerText = goal.title;
+        document.getElementById("goalDesc").innerText = goal.desc;
+        document.getElementById("goalProgressBar").style.width = goal.percentage + "%";
+        document.getElementById("goalStats").innerText = `${goal.percentage}% Funded — ${goal.statusText}`;
+      }
     }
-  }
-  window.addEventListener('load', renderPublicGoal);
-</script>
+    window.addEventListener('load', renderPublicGoal);
+  </script>
+
   <footer style="background: #102217; padding: 2.5rem 2rem; text-align: center; color: #cbd5e1; font-size: 0.95rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1);">
     <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Watership Stewards. All rights reserved.</p>
   </footer>
