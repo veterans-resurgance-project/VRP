@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Staff Portal | The Veterans Resurgence Project</title>
+</head>
+<body style="background: #0f172a; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 2rem;">
+
+  <main style="max-width: 1000px; margin: 0 auto;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 2rem;">
+      <div>
+        <span style="background: rgba(163,230,53,0.15); color: #a3e635; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; padding: 0.3rem 0.8rem; border-radius: 20px;">Restricted Access</span>
+        <h1 style="color: #ffffff; font-size: 1.8rem; margin: 0.5rem 0 0 0;">Internal Staff Portal &amp; Queue Tracker</h1>
+      </div>
+      <div>
+        <button onclick="exportCSV()" style="background: #334155; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Export to Spreadsheet (CSV)</button>
+        <button onclick="clearData()" style="background: #7f1d1d; color: #fca5a5; border: none; padding: 0.6rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer; margin-left: 0.5rem;">Clear All</button>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap;">
+      <button onclick="filterTable('All')" style="background: #a3e635; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer;">All Submissions</button>
+      <button onclick="filterTable('Land Partnerships')" style="background: #1e293b; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Land Partnerships</button>
+      <button onclick="filterTable('Equipment Wishlist')" style="background: #1e293b; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Equipment &amp; Fuel Wishlist</button>
+      <button onclick="filterTable('Academic & Extension')" style="background: #1e293b; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer;">Academic &amp; Extension</button>
+    </div>
+
+    <div style="background: #1e293b; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+        <thead>
+          <tr style="background: rgba(15,23,42,0.6); color: #94a3b8; border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <th style="padding: 1rem;">Date</th>
+            <th style="padding: 1rem;">Category</th>
+            <th style="padding: 1rem;">Name / Org</th>
+            <th style="padding: 1rem;">Item / Scope</th>
+            <th style="padding: 1rem;">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="submission-table-body">
+          </tbody>
+      </table>
+      <div id="empty-state" style="padding: 3rem; text-align: center; color: #94a3b8; display: none;">
+        No submissions found in local storage.
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let currentFilter = 'All';
+
+    function loadSubmissions() {
+      const tbody = document.getElementById('submission-table-body');
+      const emptyState = document.getElementById('empty-state');
+      const entries = JSON.parse(localStorage.getItem('vrp_submissions')) || [];
+
+      tbody.innerHTML = '';
+
+      const filtered = currentFilter === 'All' ? entries : entries.filter(e => e.category === currentFilter);
+
+      if (filtered.length === 0) {
+        emptyState.style.display = 'block';
+        return;
+      } else {
+        emptyState.style.display = 'none';
+      }
+
+      filtered.reverse().forEach(entry => {
+        const tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+        
+        let badgeColor = '#a3e635';
+        if (entry.category === 'Equipment Wishlist') badgeColor = '#63b3ed';
+        if (entry.category === 'Academic & Extension') badgeColor = '#fbd38d';
+
+        tr.innerHTML = `
+          <td style="padding: 1rem; color: #94a3b8; font-size: 0.85rem;">${entry.date}</td>
+          <td style="padding: 1rem;"><span style="color: ${badgeColor}; font-weight: 600; font-size: 0.8rem; background: rgba(255,255,255,0.05); padding: 0.2rem 0.5rem; border-radius: 4px;">${entry.category}</span></td>
+          <td style="padding: 1rem; font-weight: 600; color: #fff;">${entry.name}</td>
+          <td style="padding: 1rem; color: #cbd5e1;">${entry.item}</td>
+          <td style="padding: 1rem; color: #94a3b8; font-size: 0.85rem;">${entry.notes || '—'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterTable(category) {
+      currentFilter = category;
+      loadSubmissions();
+    }
+
+    function clearData() {
+      if (confirm('Are you sure you want to clear all locally saved submissions?')) {
+        localStorage.removeItem('vrp_submissions');
+        loadSubmissions();
+      }
+    }
+
+    function exportCSV() {
+      const entries = JSON.parse(localStorage.getItem('vrp_submissions')) || [];
+      if (entries.length === 0) {
+        alert('No data to export.');
+        return;
+      }
+
+      let csvContent = "data:text/csv;charset=utf-8,Date,Category,Name,Item,Notes\n";
+      entries.forEach(e => {
+        csvContent += `"${e.date}","${e.category}","${e.name}","${e.item}","${e.notes || ''}"\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "VRP_Submissions_Export.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    window.onload = loadSubmissions;
+  </script>
+</body>
+</html>
