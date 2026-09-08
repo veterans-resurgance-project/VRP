@@ -103,17 +103,17 @@
       const tbody = document.getElementById("inventoryTableBody");
       const items = getInventory();
       
-      tbody.innerHTML = "";
+      tbody.textContent = "";
 
       if (items.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: #64748b;">No inventory records found. Add an item above.</td></tr>`;
+        tbody.textContent = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: #64748b;">No inventory records found. Add an item above.</td></tr>`;
         return;
       }
 
       items.forEach((item, index) => {
         let row = document.createElement("tr");
         row.style.borderBottom = "1px solid #334155";
-        row.innerHTML = `
+        row.textContent = `
           <td style="padding: 1rem; color: #f8fafc; font-weight: 500;">${item.name}</td>
           <td style="padding: 1rem; color: #cbd5e1; font-size: 0.95rem;">${item.category}</td>
           <td style="padding: 1rem; text-align: center; color: #a3e635; font-weight: 700;">${item.qty}</td>
