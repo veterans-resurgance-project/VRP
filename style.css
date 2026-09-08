@@ -1,0 +1,779 @@
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #1a3c27;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover {
+  color: #a3c1ad;
+}
+.btn-nav {
+  background: #2c5e3b;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #a3c1ad;
+}
+  /* Hero Section */
+.hero-header {
+  text-align: center;
+  padding: 8rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Screenshot_20260421-000340.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+}
+
+.hero-header .brand-subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ddd !important;
+}
+
+.hero-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #f1f1f1 !important;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #27ae60;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-hero:hover {
+  background: #219653;
+}
+
+/* Framework Banner */
+.banner-section {
+  background: linear-gradient(135deg, #f4f6f4 0%, #e8f0ec 100%);
+  padding: 3.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #dcdcdc;
+}
+.banner-container {
+  max-width: 850px;
+}
+.banner-section h2 {
+  color: #1a3c27;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.banner-section > div > p {
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+.banner-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border-top: 5px solid #2c5e3b;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+.banner-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.banner-card h3 {
+  color: #1a3c27;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.banner-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Tree of Life Framework Section */
+.framework-section {
+  padding: 5rem 1rem;
+  background: #ffffff;
+  color: #222;
+}
+.framework-container {
+  max-width: 1100px;
+}
+.framework-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.framework-header h2 {
+  font-size: 2.25rem;
+  color: #1a3c27;
+  margin-bottom: 1rem;
+}
+.framework-header p {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.framework-group {
+  margin-bottom: 2.5rem;
+}
+.tier-title-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.badge {
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.foundation-badge { background: #2c5e3b; }
+.structure-badge { background: #3b5a76; }
+.outcome-badge { background: #8b6b23; }
+
+.tier-title-bar h3 {
+  margin-left: 1rem;
+  font-size: 1.35rem;
+}
+.foundation-badge + h3 { color: #2c5e3b; }
+.structure-badge + h3 { color: #3b5a76; }
+.outcome-badge + h3 { color: #8b6b23; }
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.structure-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.framework-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.foundation-card {
+  background: #f4f6f4;
+  border-left: 4px solid #2c5e3b;
+}
+.foundation-card h4 { color: #1a3c27; margin-bottom: 0.5rem; font-size: 1.1rem; }
+
+.structure-card {
+  background: #f4f6f9;
+  border-left: 4px solid #3b5a76;
+}
+.structure-card h4 { color: #1e364c; margin-bottom: 0.5rem; font-size: 1.1rem; }
+
+.outcome-card {
+  background: #fbf9f4;
+  border-left: 4px solid #8b6b23;
+}
+.outcome-card h4 { color: #4a3812; margin-bottom: 0.5rem; font-size: 1.1rem; }
+
+.framework-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Wish List Section */
+.wishlist-section {
+  padding: 5rem 1rem;
+  background: #ffffff;
+  text-align: center;
+}
+.wishlist-section h2 {
+  font-size: 2.25rem;
+  color: #1a3c27;
+  margin-bottom: 0.75rem;
+}
+.wishlist-intro {
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  color: #555;
+  font-size: 1.05rem;
+}
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+.wishlist-card {
+  background: #f8faf9;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wishlist-card h3 {
+  color: #1a3c27;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.wishlist-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.progress-container {
+  margin: 1.25rem 0 0.5rem 0;
+}
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+.progress-track {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: #2c5e3b;
+  width: 0%;
+  height: 100%;
+}
+.btn-card {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #2c5e3b;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Donation Form Box */
+.donate-form-box {
+  margin-top: 3rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.donate-form-box h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn-submit {
+  background: #2c5e3b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Overview Section ("Why It Matters") */
+.overview-section {
+  padding: 4rem 1rem;
+  background: #f4f6f4;
+  color: #222;
+}
+.overview-container {
+  max-width: 1000px;
+}
+.overview-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1a3c27;
+  font-size: 2rem;
+}
+.overview-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: #555;
+  font-size: 1.05rem;
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.overview-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-top: 4px solid #2c5e3b;
+}
+.overview-card h3 {
+  color: #2c5e3b;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+.overview-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #1a3c27;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+footer h2 {
+  margin-bottom: 0.5rem;
+}
+footer p {
+  color: #a3c1ad;
+  margin-bottom: 0.5rem;
+}
+/* Framework Section with Regenerating Hillside Background */
+.framework-section {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url('markup_1000005669.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* Ensure text elements inside this section pop against the overlay */
+.framework-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.framework-header p {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.tier-title-bar h3 {
+  color: #ffffff !important;
+}
+
+.tier-title-bar {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card h4 {
+  color: #0f172a !important;
+}
+
+.framework-card p {
+  color: #475569 !important;
+}/* Framework Section with Regenerating Hillside Background */
+.framework-section {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(30, 41, 59, 0.35), rgba(30, 41, 59, 0.35)), url('YOUR-EXACT-IMAGE-FILENAME.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* Ensure text elements inside this section pop against the overlay */
+.framework-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.framework-header p {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.tier-title-bar h3 {
+  color: #ffffff !important;
+}
+
+.tier-title-bar {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.framework-card h4 {
+  color: #0f172a !important;
+}
+
+.framework-card p {
+  color: #475569 !important;
+}
+.framework-card, .structure-card, .overview-card {
+  background: linear-gradient(135deg, #0f2c1e 0%, #1e6b3c 100%);
+  color: #ffffff !important;
+  border-left: 5px solid #4ade80;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.framework-card h4, .structure-card h4, .overview-card h3 {
+  color: #ffffff !important;
+}
+
+.framework-card p, .structure-card p, .overview-card p, .framework-card li {
+  color: #cbd5e1 !important;
+}
+/* Force Background and High-Contrast Text on Framework & Outcome Cards */
+.framework-card, .structure-card, .overview-card {
+  background: linear-gradient(135deg, #0b1f14 0%, #133822 100%) !important;
+  color: #ffffff !important;
+  border-left: 5px solid #27ae60 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+.framework-card h3, .framework-card h4, .structure-card h4, .overview-card h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.framework-card p, .structure-card p, .overview-card p, .framework-card li {
+  color: #f1f5f9 !important; /* Bright off-white for maximum clarity */
+}
+/* Override all card backgrounds and text across Foundation, Structure, and Outcome tiers */
+.framework-group, .overview-grid, .framework-grid, 
+.framework-card, .structure-card, .overview-card {
+  background-color: #112a1b !important;
+  background-image: linear-gradient(135deg, rgba(17, 42, 27, 0.95), rgba(30, 107, 60, 0.9)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Force headings to pure white with bright green accents */
+.framework-group h3, .tier-title-bar h3, .framework-card h4, .structure-card h4, .overview-card h3 {
+  color: #ffffff !important;
+}
+
+/* Force all body text, paragraphs, and list items to crisp, highly visible white */
+.framework-group p, .framework-group span, .framework-group li,
+.framework-card p, .structure-card p, .overview-card p, 
+.framework-card li, .structure-card li, .overview-card li {
+  color: #f8fafc !important;
+}
+/* Definitive Forest Theme Overrides for Foundation, Structure & Outcome Containers */
+div[class*="card"], div[class*="group"], section[id*="program"] {
+  background: linear-gradient(135deg, rgba(15, 38, 24, 0.92), rgba(27, 84, 48, 0.88)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+div[class*="card"] h3, div[class*="card"] h4, div[class*="group"] h3 {
+  color: #ffffff !important;
+}
+
+div[class*="card"] p, div[class*="card"] li, div[class*="group"] p {
+  color: #f1f5f9 !important;
+}
+/* Force the outer section wrappers and grid backgrounds to match the rich forest theme */
+section, .container, .framework-container, .overview-container, #program-overview {
+  background: #0f2618 !important;
+  color: #ffffff !important;
+}
+/* Force Category Title Headings, Wish List, and Why This Work Matters titles to bold, high-visibility white */
+.tier-title-bar h3, 
+.section-title h2, 
+#wishlist h2, 
+#program-overview h2, 
+.category-title, 
+h2, h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+/* Button styling with moss and sage green palette */
+.btn, button, .cta-button, a.button {
+  background: linear-gradient(135deg, #4A6B35 0%, #8FA382 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hover state for buttons */
+.btn:hover, button:hover, .cta-button:hover, a.button:hover {
+  background: linear-gradient(135deg, #577d3fya 0%, #9cb390 100%) !important;
+  border-color: #ffffff !important;
+}
+/* Restore and protect text readability specifically on the partners page */
+main.container p, main.container li, main.container span {
+  color: #f8fafc !important;
+}
+
+main.container strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Style the agreement links inside the partner description cards to stand out clearly */
+main.container a {
+  color: #8FA382 !important; /* Sage green accent */
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+main.container a:hover {
+  color: #4A6B35 !important; /* Moss green on hover */
+}
+/* Direct High-Contrast Override for Partners Page Content Blocks */
+main.container, .partner-section, .partner-card, .content-box {
+  background-color: #0f2618 !important;
+  color: #ffffff !important;
+}
+
+main.container p, 
+main.container li, 
+main.container span, 
+main.container div,
+.partner-section p, 
+.partner-section li {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+main.container a {
+  color: #b8ccaf !important; /* Lighter Sage for maximum visibility */
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+/* Definitive Fix: Target explicit text elements inside main container */
+main.container p, 
+main.container li, 
+main.container span, 
+main.container div, 
+main.container article, 
+main.container section {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+main.container h1, 
+main.container h2, 
+main.container h3, 
+main.container h4 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+main.container a {
+  color: #b8ccaf !important; /* Brighter sage for high visibility against dark background */
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+main.container a:hover {
+  color: #ffffff !important;
+}
+/* Force light background boxes on the partners page to use crisp dark text */
+main.container .card, 
+main.container .partner-box, 
+main.container .box,
+.partners-container div,
+.light-box {
+  background-color: #f8fafc !important; /* Clean light background */
+  color: #0f172a !important;            /* Deep dark slate/black for maximum contrast */
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Ensure all paragraphs and lists inside those light boxes are dark and readable */
+main.container .card p, 
+main.container .card li, 
+main.container .card span,
+.partners-container div p,
+.light-box p {
+  color: #1e293b !important;            /* Near-black for crisp legibility */
+}
+
+/* Style links inside the light boxes to stand out clearly in a rich forest tone */
+main.container .card a,
+.light-box a {
+  color: #27ae60 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+
+
+.partners-section p, .partners-section li, .partners-section span, 
+.partner-card p, .partner-card li, .card p, .card li {
+  color: #1f2937 !important; /* Rich charcoal black */
+  opacity: 1 !important;
+}
+
+.partners-section a, .partner-card a, .card a {
+  color: #1b4d3e !important; /* Deep forest green for links */
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+/* Force absolute dark text on any white or light partner card */
+.partners-section div, .partner-card, .card, .white-box {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+/* Definitive High-Contrast Fix: Dark Text on White Partnership & Framework Boxes */
+.framework-card, 
+.structure-card, 
+.overview-card, 
+.framework-group, 
+.partner-box, 
+.card, 
+div[class*="framework"], 
+div[class*="partner"] {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+.framework-card p, 
+.framework-card li, 
+.framework-card span, 
+.framework-card h3, 
+.framework-card h4, 
+.structure-card p, 
+.structure-card li, 
+.structure-card span, 
+.structure-card h3, 
+.structure-card h4, 
+.overview-card p, 
+.overview-card li, 
+.overview-card span, 
+.overview-card h3, 
+.framework-group p, 
+.framework-group li, 
+.framework-group span, 
+.framework-group h3,
+.partner-box p, 
+.partner-box li, 
+.partner-box span, 
+.partner-box h3 {
+  color: #1f2937 !important; /* Deep charcoal black for maximum legibility */
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Force links inside those white boxes into a sharp, visible green */
+.framework-card a, 
+.structure-card a, 
+.overview-card a, 
+.framework-group a, 
+.partner-box a {
+  color: #1b4d3e !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+/* Global high-contrast enforcement for the Roots of Support / Impact boxes */
+div[class*="impact"], div[class*="roots"], .support-box, .impact-box {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+div[class*="impact"] p, div[class*="impact"] li, div[class*="impact"] span, div[class*="impact"] h3,
+div[class*="roots"] p, div[class*="roots"] li, div[class*="roots"] span, div[class*="roots"] h3,
+.support-box p, .support-box li, .support-box h3,
+.impact-box p, .impact-box li, .impact-box h3 {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+}
